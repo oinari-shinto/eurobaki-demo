@@ -8,7 +8,7 @@ import { Button } from "./Button"
 const Header = () => {
   return (
     <Nav>
-      <NavLink to="/">EXLORIX</NavLink>
+      <NavLink to="/">30 Bar</NavLink>
       <Bars />
       <NavMenu>
         {menuData.map((item, index) => (
