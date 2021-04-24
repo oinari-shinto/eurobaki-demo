@@ -1,0 +1,25 @@
+[{
+        "img": "../assets/images/reflex-N-1000.jpg",
+        "alt": "Reflex N 1000",
+        "name": "Reflex N 1000",
+        "button": "Купить"
+    },
+    {
+        "img": "../assets/images/flamco-1000.png",
+        "alt": "Flamco R 1000",
+        "name": "Flamco R 1000",
+        "button": "Купить"
+    },
+    {
+        "img": "../assets/images/zilmet-1000.jpg",
+        "alt": "Zilmet Ultra Pro 1000",
+        "name": "Zilmet Ultra Pro 1000",
+        "button": "Купить"
+    },
+    {
+        "img": "../assets/images/TestWester.png",
+        "alt": "Wester WRV 1000",
+        "name": "Wester WRV 1000",
+        "button": "Купить"
+    }
+]
