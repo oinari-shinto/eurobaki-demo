@@ -4,5 +4,5 @@ export const menuData = [
     {title: "Reflex", link: "/reflex"},
     {title: "Flamco", link: "/flamco"},
     {title: "Contact", link: "/contact"},
-    {title: "Прайс", link: "/price"},
+    {title: "Прайс", link: "/page-2"},
 ]

@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import { Button } from './Button'
 import Video from '../assets/videos/video-3.mp4'
+import Component1 from './Component1'
+import HeroH1 from './animeComponents/HeroH1'
 
 export const Hero = () => {
     return (
@@ -11,7 +13,8 @@ export const Hero = () => {
             </HeroBg>
             <HeroContent>
                 <HeroItems>
-                    <HeroH1>Продажа и изготовление расширительных баков</HeroH1>
+                    <HeroH1/>
+                    {/* <HeroH1>Продажа и изготовление расширительных баков</HeroH1> */}
                     <HeroP>Завод производство. Доставка по России</HeroP>
                     <Button primary="true" big="true" round="true" to="/price">Купить</Button>
                 </HeroItems>
@@ -19,6 +22,8 @@ export const Hero = () => {
         </HeroContainer>
     )
 }
+
+
 
 
 const HeroContainer = styled.div`
@@ -84,12 +89,12 @@ const HeroItems = styled.div`
     line-height:  1.1;
     font-weight: bold;
 `
-const HeroH1 = styled.h1`
-    font-size: clamp(1.5rem, 6vw, 4rem);
-    margin-bottom: 1.5rem;
-    letter-spacing: 1px;
-    padding: 0 1rem;
-`
+// const HeroH1 = styled.h1`
+//     font-size: clamp(1.5rem, 6vw, 4rem);
+//     margin-bottom: 1.5rem;
+//     letter-spacing: 1px;
+//     padding: 0 1rem;
+// `
 const HeroP = styled.p`
     font-size: clamp(1rem, 3vw, 3rem);
     margin-bottom: 2rem;
