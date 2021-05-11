@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import {useStaticQuery, graphql} from 'gatsby'
 import Img from 'gatsby-image'
 import { Button } from './Button'
@@ -66,6 +66,16 @@ function getProducts(data) {
 
 export default Products
 
+const animateOpacity = keyframes`
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+
+`;
+
 const ProductsContainer = styled.div`
     min-height: 50vh;
     padding: 5rem calc((100vw - 1300px) / 2);
@@ -73,6 +83,7 @@ const ProductsContainer = styled.div`
     color: #fff;
 `
 const ProductsHeading = styled.div`
+    animation: ${animateOpacity} 2s infinite;
     font-size: clamp(1.2rem, 5vw, 3rem);
     margin-bottom: 5rem;
     text-align: center;

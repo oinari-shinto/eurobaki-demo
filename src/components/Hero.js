@@ -15,7 +15,7 @@ export const Hero = () => {
                 <HeroItems>
                     <HeroH1/>
                     {/* <HeroH1>Продажа и изготовление расширительных баков</HeroH1> */}
-                    <HeroP>Завод производство. Доставка по России</HeroP>
+                    {/* <HeroP>Завод производство. Доставка по России</HeroP> */}
                     <Button primary="true" big="true" round="true" to="/price">Купить</Button>
                 </HeroItems>
             </HeroContent>
@@ -95,8 +95,8 @@ const HeroItems = styled.div`
 //     letter-spacing: 1px;
 //     padding: 0 1rem;
 // `
-const HeroP = styled.p`
-    font-size: clamp(1rem, 3vw, 3rem);
-    margin-bottom: 2rem;
-    font-weight: 400;
-`
+// const HeroP = styled.p`
+//     font-size: clamp(1rem, 3vw, 3rem);
+//     margin-bottom: 2rem;
+//     font-weight: 400;
+// `
