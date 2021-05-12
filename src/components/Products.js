@@ -67,14 +67,23 @@ function getProducts(data) {
 export default Products
 
 const animateOpacity = keyframes`
-  0%, 100% {
-    opacity: 1;
+  0% {
+    opacity: -1;
   }
-  50% {
-    opacity: 0;
+  100% {
+    opacity: 1;
   }
 
 `;
+
+const animatePosition = keyframes`
+  0% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+`
 
 const ProductsContainer = styled.div`
     min-height: 50vh;
@@ -83,13 +92,14 @@ const ProductsContainer = styled.div`
     color: #fff;
 `
 const ProductsHeading = styled.div`
-    animation: ${animateOpacity} 2s infinite;
+    animation: ${animateOpacity} 5s  , ${animatePosition} 2s ;
     font-size: clamp(1.2rem, 5vw, 3rem);
     margin-bottom: 5rem;
     text-align: center;
     color: #000;
 `
 const ProductsWrapper = styled.div`
+  animation: ${animateOpacity} 5s  , ${animatePosition} 2s ;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
@@ -119,7 +129,7 @@ const ProductImg = styled(Img)`
   max-width: 100%;
   position: relative;
   border-radius: 10px;
-  filter: brightness(70%);
+  filter: brightness(90%);
   transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
 
   &:hover {
