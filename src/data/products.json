@@ -20,6 +20,7 @@
         "img": "../assets/images/TestWester.png",
         "alt": "Wester WRV 1000",
         "name": "Wester WRV 1000",
-        "button": "Купить"
+        "button": "Купить",
+        "link": "/src/pages/Wester"
     }
 ]
