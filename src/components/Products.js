@@ -41,7 +41,7 @@ function getProducts(data) {
                 <ProductInfo>
                   <TextWrap>
                     <ImLocation />
-                    <ProductTitle>{item.node.name}</ProductTitle>
+                    <ProductTitle >{item.node.name}</ProductTitle>
                   </TextWrap>
                   <Button to='/products' primary="true" round="true"
                   css={`
