@@ -5,6 +5,7 @@ import Img from 'gatsby-image'
 import { Button } from './Button'
 import { resetWarningCache } from 'prop-types'
 import {ImLocation} from 'react-icons/im'
+import Link from 'gatsby-link'
 
 const Products = ({ heading }) => {
 const data = useStaticQuery(graphql`
@@ -15,6 +16,7 @@ const data = useStaticQuery(graphql`
           alt
           button
           name
+          link
           img {
             childImageSharp {
               fluid {
@@ -24,6 +26,7 @@ const data = useStaticQuery(graphql`
           }
         }
       }
+      
     }
   }
 `)
@@ -34,14 +37,16 @@ function getProducts(data) {
     data.allProductsJson.edges.forEach((item, index) => {
         productsArray.push(
             <ProductCard key={index}>
+                <Link to={item.node.link}>
                 <ProductImg 
-                     
+                    
                      alt={item.node.alt}
                      fluid={item.node.img.childImageSharp.fluid}/>
+                </Link>
                 <ProductInfo>
                   <TextWrap>
                     <ImLocation />
-                    <ProductTitle >{item.node.name}</ProductTitle>
+                    <ProductTitle to="/Wester">{item.node.name}</ProductTitle>
                   </TextWrap>
                   <Button to='/products' primary="true" round="true"
                   css={`
