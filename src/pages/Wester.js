@@ -1,13 +1,25 @@
-import React from 'react'
+import * as React from "react"
+import { Link } from "gatsby"
+import { useSpring, animated  } from 'react-spring';
 
-const Wester = () => {
-    return (
-        <div>
-            <h1>Wester</h1>
-            <p>Расширительные баки для отопления и водоснаюжения Wester</p>
-            <p>Сменная Итальянская мембрана</p>
-        </div>
-    )
-}
+import Layout from "../components/layout"
+import SEO from "../components/seo"
+import Component1 from "../components/Component1"
+import Component2 from "../components/Component2"
+
+const Wester = () => (
+  <Layout>
+    <SEO title="Page two" />
+    <Component1/>
+    <Component2/>
+    
+    
+    <Link to="/">Go back to the homepage</Link>
+  </Layout>
+)
 
 export default Wester
+
+
+
+
