@@ -6,20 +6,31 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Component1 from "../components/Component1"
 import Component2 from "../components/Component2"
+import { Hero } from "../components/Hero"
+import Products from "../components/Products"
+import Certificates from "../components/Certificates"
+import Stats from "../components/Stats"
+import Email from "../components/Email"
+import Footer from "../components/Footer"
+
+
 
 const Wester = () => (
   <Layout>
-    <SEO title="Page two" />
-    <Component1/>
-    <Component2/>
-    
-    
+    <SEO title="Wester" />
+    <Hero/>
+    {/* <Products heading="Выберите расширительный бак"/> */}
+    <Certificates />
+    <Stats />
+    <Email />
     <Link to="/">Go back to the homepage</Link>
+    
+    {/* <p>
+      <Link to="/page-2/">Go to page 2</Link> <br />
+      <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
+    </p> */}
   </Layout>
 )
 
 export default Wester
-
-
-
 
