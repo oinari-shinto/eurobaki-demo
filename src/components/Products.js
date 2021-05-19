@@ -6,6 +6,7 @@ import { Button } from './Button'
 import { resetWarningCache } from 'prop-types'
 import {ImLocation} from 'react-icons/im'
 import Link from 'gatsby-link'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 const Products = ({ heading }) => {
 const data = useStaticQuery(graphql`
@@ -38,10 +39,15 @@ function getProducts(data) {
         productsArray.push(
             <ProductCard key={index}>
                 <Link to={item.node.link}>
+                
+                {/* <GatsbyImage image={getImage(item.node.img)}/> */}
+
+
+                
+               
                 <ProductImg 
-                    
                      alt={item.node.alt}
-                     fluid={item.node.img.childImageSharp.fluid}/>
+                     fluid={item.node.img.childImageSharp.fluid}/> 
                 </Link>
                 <ProductInfo>
                   <TextWrap>
@@ -51,7 +57,7 @@ function getProducts(data) {
                   <Button to='/products' primary="true" round="true"
                   css={`
                   position: absolute; 
-                  top: 320px;
+                  top: 220px;
                   font-size: 14px;
                   `}>
                   {item.node.button}</Button>
@@ -123,11 +129,11 @@ const ProductsWrapper = styled.div`
 const ProductCard = styled.div`
   line-height: 2;
   width: 100%;
-  height: 500px;
+  height: 100%;
    /* 100% if i want see image */
   position: relative;
   border-radius: 10px;
-  transition: 0.2s ease;
+  transition: 0.2s ease; 
 `
 const ProductImg = styled(Img)`
   height: 100%;
@@ -158,7 +164,7 @@ const TextWrap = styled.div`
   display: flex;
   align-items: center;
   position: absolute;
-  top: 275px;
+  top: 175px;
 `
 
 const ProductTitle = styled.div`
