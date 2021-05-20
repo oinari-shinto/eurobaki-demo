@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 import Component1 from "../components/Component1"
 import Component2 from "../components/Component2"
 import { Hero } from "../components/Hero"
-import Products from "../components/Products"
+import ProductsWester from "../components/ProductsWester"
 import Certificates from "../components/Certificates"
 import Stats from "../components/Stats"
 import Email from "../components/Email"
@@ -19,7 +19,7 @@ const Wester = () => (
   <Layout>
     <SEO title="Wester" />
     <Hero/>
-    <Products heading="Wester"/>
+    <ProductsWester heading="Wester"/>
     <Certificates />
     <Stats />
     <Email />

@@ -7,10 +7,10 @@ import { resetWarningCache } from 'prop-types'
 import {ImLocation} from 'react-icons/im'
 import Link from 'gatsby-link'
 
-const Products = ({ heading }) => {
+const ProductsWester = ({ heading }) => {
 const data = useStaticQuery(graphql`
- query ProductsQuery  {
-    allProductsJson (limit: 4) {
+ query ProductsQueryWester {
+    allProductsJson (filter: {brend: {eq: "Wester"}}) {
       edges {
         node {
           alt
@@ -51,7 +51,7 @@ function getProducts(data) {
                   <Button to='/products' primary="true" round="true"
                   css={`
                   position: absolute; 
-                  top: 320px;
+                  top: 220px;
                   font-size: 14px;
                   `}>
                   {item.node.button}</Button>
@@ -69,7 +69,7 @@ function getProducts(data) {
     )
 }
 
-export default Products
+export default ProductsWester
 
 const animateOpacity = keyframes`
   0% {
@@ -91,7 +91,7 @@ const animatePosition = keyframes`
 `
 
 const ProductsContainer = styled.div`
-    min-height: 50vh;
+    min-height: 80vh;
     padding: 5rem calc((100vw - 1300px) / 2);
     background: transparent ;
     color: #fff;
@@ -110,7 +110,8 @@ const ProductsWrapper = styled.div`
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
   justify-items: center;
-  padding: 0 2rem;
+  padding: 1 2rem;
+  
   
 
   @media screen and (max-width: 1200px) {
@@ -165,11 +166,11 @@ const TextWrap = styled.div`
   display: flex;
   align-items: center;
   position: absolute;
-  top: 275px;
+  top: 175px;
 `
 
 const ProductTitle = styled.div`
-  font-weight: 400;
+  font-weight: 300;
   font-size: 1rem;
   margin-left: 0.5rem;
   text-shadow: 0 2px 3px rgba(0, 0, 0, 1);

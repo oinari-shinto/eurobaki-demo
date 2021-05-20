@@ -4,28 +4,90 @@
         "alt": "Reflex N 1000",
         "name": "Reflex N 1000",
         "button": "Купить",
-        "link": "/Reflex"
+        "link": "/Reflex",
+        "brend": "Reflex",
+        "page": "main"
     },
     {
         "img": "../assets/images/flamco-1000.png",
         "alt": "Flamco R 1000",
         "name": "Flamco R 1000",
         "button": "Купить",
-        "link": "/Flamco"
+        "link": "/Flamco",
+        "page": "main",
+        "brend": "Flamco"
     },
     {
         "img": "../assets/images/zilmet-1000.jpg",
         "alt": "Zilmet Ultra Pro 1000",
         "name": "Zilmet Ultra Pro 1000",
         "button": "Купить",
-        "link": "/Zilmet"
+        "link": "/Zilmet",
+        "page": "main",
+        "brend": "Zilmet"
     },
     {
-        "img": "../assets/images/TestWester.png",
+        "img": "../assets/images/wrv2-1000.jpg",
         "alt": "Wester WRV 1000",
         "name": "Wester WRV 1000",
         "button": "Купить",
-        "link": "/Wester"
+        "link": "/Wester",
+        "page": "main",
+        "brend": "Wester"
+        
+    },
+    {
+        "img": "../assets/images/wrv2-1000.jpg",
+        "alt": "Wester WRV 1500",
+        "name": "Wester WRV 1500",
+        "button": "Купить",
+        "link": "/Wester",
+        "brend": "Wester"
+        
+    },
+    {
+        "img": "../assets/images/wrv2-1000.jpg",
+        "alt": "Wester WRV 2000",
+        "name": "Wester WRV 2000",
+        "button": "Купить",
+        "link": "/Wester",
+        "brend": "Wester"
+        
+    },
+    {
+        "img": "../assets/images/wrv2-1000.jpg",
+        "alt": "Wester WRV 2500",
+        "name": "Wester WRV 2500",
+        "button": "Купить",
+        "link": "/Wester",
+        "brend": "Wester"
+        
+    },
+    {
+        "img": "../assets/images/wrv2-1000.jpg",
+        "alt": "Wester WRV 3000",
+        "name": "Wester WRV 3000",
+        "button": "Купить",
+        "link": "/Wester",
+        "brend": "Wester"
+        
+    },
+    {
+        "img": "../assets/images/wrv2-1000.jpg",
+        "alt": "Wester WRV 5000",
+        "name": "Wester WRV 5000",
+        "button": "Купить",
+        "link": "/Wester",
+        "brend": "Wester"
+        
+    },
+    {
+        "img": "../assets/images/wrv2-1000.jpg",
+        "alt": "Wester WRV 10 000",
+        "name": "Wester WRV 10 000",
+        "button": "Купить",
+        "link": "/Wester",
+        "brend": "Wester"
         
     }
 ]
