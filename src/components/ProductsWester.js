@@ -6,6 +6,7 @@ import { Button } from './Button'
 import { resetWarningCache } from 'prop-types'
 import {ImLocation} from 'react-icons/im'
 import Link from 'gatsby-link'
+import { useSpring, animated } from 'react-spring'
 
 const ProductsWester = ({ heading }) => {
 const data = useStaticQuery(graphql`
@@ -61,34 +62,28 @@ function getProducts(data) {
     })
     return productsArray
 }
+const fadeIn = useSpring(
+  {
+      from: { opacity: 0, transform: 'translateY(3rem)' },
+      to: { opacity: 1, transform: 'translateY(-1rem)' },
+      config: { duration: 1000 }
+  }
+)
     return (
         <ProductsContainer>
+          <animated.div style={fadeIn}>
             <ProductsHeading>{heading}</ProductsHeading>
             <ProductsWrapper>{getProducts(data)}</ProductsWrapper>
+          </animated.div>  
         </ProductsContainer>
     )
 }
 
 export default ProductsWester
 
-const animateOpacity = keyframes`
-  0% {
-    opacity: -1;
-  }
-  100% {
-    opacity: 1;
-  }
 
-`;
 
-const animatePosition = keyframes`
-  0% {
-    transform: translateY(100px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-`
+
 
 const ProductsContainer = styled.div`
     min-height: 80vh;
@@ -98,14 +93,14 @@ const ProductsContainer = styled.div`
     
 `
 const ProductsHeading = styled.div`
-    animation: ${animateOpacity} 5s  , ${animatePosition} 2s ;
+    
     font-size: clamp(1.2rem, 5vw, 3rem);
     margin-bottom: 5rem;
     text-align: center;
     color: #000;
 `
 const ProductsWrapper = styled.div`
-  animation: ${animateOpacity} 5s  , ${animatePosition} 2s ;
+  
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
