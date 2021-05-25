@@ -15,7 +15,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <Hero HeroH1=" "/>
+    <Hero HeaderMark="Продажа и изготовление расширительных баков"/>
     <Products heading="Выберите расширительный бак"/>
     <Certificates />
     <Stats />

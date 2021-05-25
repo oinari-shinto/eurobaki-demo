@@ -5,7 +5,7 @@ import Video from '../assets/videos/video-3.mp4'
 import Component1 from './Component1'
 import HeroH1 from './animeComponents/HeroH1'
 
-export const Hero = () => {
+export const Hero = ({HeaderMark}) => {
     return (
         <HeroContainer>
             <HeroBg>
@@ -13,7 +13,8 @@ export const Hero = () => {
             </HeroBg>
             <HeroContent>
                 <HeroItems>
-                    <HeroH1></HeroH1>
+                    <HeroH1 HeaderMark={HeaderMark}/>
+                    
                     {/* <HeroH1>Продажа и изготовление расширительных баков</HeroH1> */}
                     {/* <HeroP>Завод производство. Доставка по России</HeroP> */}
                     <Button primary="true" big="true" round="true" to="/price">Купить</Button>
