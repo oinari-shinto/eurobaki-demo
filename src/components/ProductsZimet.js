@@ -12,7 +12,7 @@ const ProductsZilmet = ({ heading }) => {
 const data = useStaticQuery(graphql`
  query ProductsQueryZilmet {
     
-    allProductsJson (filter: {brend: {eq: "Zilmet"}}) {
+    allProductsJson (filter: {mark: {eq: "Zilmet"}}) {
       edges {
         node {
           alt

@@ -12,7 +12,7 @@ export default function HeroH1() {
     )
     return (
         <animated.div style={fadeIn}>
-            <HeroH2>Продажа и изготовление расширительных баков</HeroH2>
+            <HeaderMark>Продажа и изготовление расширительных баков</HeaderMark>
             <HeroP>Завод производство. Доставка по России</HeroP>
         </animated.div>
     )
@@ -21,7 +21,7 @@ export default function HeroH1() {
 
 
 
-const HeroH2 = styled.h1`
+const HeaderMark = styled.h1`
     font-size: clamp(1.5rem, 6vw, 4rem);
     margin-bottom: 1.5rem;
     letter-spacing: 1px;

@@ -10,7 +10,7 @@ import Link from 'gatsby-link'
 const ProductsReflex = ({ heading }) => {
 const data = useStaticQuery(graphql`
  query ProductsQueryReflex {
-    allProductsJson (filter: {brend: {eq: "Reflex"}}) {
+    allProductsJson (filter: {mark: {eq: "Reflex"}}) {
       edges {
         node {
           alt

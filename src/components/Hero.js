@@ -13,7 +13,7 @@ export const Hero = () => {
             </HeroBg>
             <HeroContent>
                 <HeroItems>
-                    <HeroH1/>
+                    <HeroH1></HeroH1>
                     {/* <HeroH1>Продажа и изготовление расширительных баков</HeroH1> */}
                     {/* <HeroP>Завод производство. Доставка по России</HeroP> */}
                     <Button primary="true" big="true" round="true" to="/price">Купить</Button>

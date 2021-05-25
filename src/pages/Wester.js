@@ -20,7 +20,7 @@ import { Container, Table } from 'react-bootstrap'
 const Wester = () => (
   <Layout>
     <SEO title="Wester" />
-    <Hero/>
+    <Hero HeroH2="Продажа и изготовление расширительных баков Wester"/>
     <ProductsWester heading="Wester"/>
     
     <Certificates />

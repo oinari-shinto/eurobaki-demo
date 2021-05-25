@@ -12,7 +12,7 @@ import { Container, Table } from 'react-bootstrap'
 const ProductsWester = ({ heading }) => {
 const data = useStaticQuery(graphql`
  query ProductsQueryWester {
-    allProductsJson (filter: {brend: {eq: "Wester"}}) {
+    allProductsJson (filter: {mark: {eq: "Wester"}}) {
       edges {
         node {
           alt
@@ -85,29 +85,96 @@ const fadeIn = useSpring(
                   <Table striped bordered hover>
                       <thead>
                         <tr>
-                          <th>Model</th>
-                          <th>First Name</th>
-                          <th>Last Name</th>
+                          <th>Model / Объем, л</th>
+                          <th>Мембрана</th>
+                          <th>Давление, бар</th>
+                          <th>Диаметр, мм</th>
+                          <th>Высота, мм</th>
+                          <th>Подкл. дюйм</th>
+                          <th>Вес, кг</th>
                           <th>Цена (руб.)</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
                           <td>WRV 750</td>
-                          <td>Mark</td>
-                          <td>Otto</td>
+                          <td>Сменная(Италия)</td>
+                          <td>10</td>
+                          <td>780</td>
+                          <td>1720</td>
+                          <td>2</td>
+                          <td>145</td>
                           <td>66 270</td>
                         </tr>
                         <tr>
+                          <td>WRV 1000</td>
+                          <td>Сменная(Италия)</td>
+                          <td>10</td>
+                          <td>780</td>
+                          <td>2200</td>
                           <td>2</td>
-                          <td>Jacob</td>
-                          <td>Thornton</td>
-                          <td>@fat</td>
+                          <td>165</td>
+                          <td>89 350</td>
                         </tr>
                         <tr>
+                          <td>WRV 1500</td>
+                          <td>Сменная(Италия)</td>
+                          <td>10</td>
+                          <td>960</td>
+                          <td>2350</td>
+                          <td>2</td>
+                          <td>244</td>
+                          <td>238 000</td> 
+                        </tr>
+                        <tr>
+                          <td>WRV 2000</td>
+                          <td>Сменная(Италия)</td>
+                          <td>10</td>
+                          <td>1100</td>
+                          <td>2450</td>
+                          <td>2</td>
+                          <td>375</td>
+                          <td>355 780</td> 
+                        </tr>
+                        <tr>
+                          <td>WRV 2500</td>
+                          <td>Сменная(Италия)</td>
+                          <td>10</td>
+                          <td>1200</td>
+                          <td>2800</td>
+                          <td>2</td>
+                          <td>307</td>
+                          <td>395 174</td> 
+                        </tr>
+                        <tr>
+                          <td>WRV 3000</td>
+                          <td>Сменная(Италия)</td>
+                          <td>10</td>
+                          <td>1250</td>
+                          <td>2700</td>
+                          <td>2 1/2</td>
+                          <td>550</td>
+                          <td>425 650</td> 
+                        </tr>
+                        <tr>
+                          <td>WRV 5000</td>
+                          <td>Сменная(Италия)</td>
+                          <td>10</td>
+                          <td>1500</td>
+                          <td>3100</td>
                           <td>3</td>
-                          <td colSpan="2">Larry the Bird</td>
-                          <td>@twitter</td>
+                          <td>655</td>
+                          <td>685 100</td> 
+                        </tr>
+                        <tr>
+                          <td>WRV 10 000</td>
+                          <td>Сменная(Италия)</td>
+                          <td>10</td>
+                          <td>1600</td>
+                          <td>5750</td>
+                          <td>4</td>
+                          <td>1920</td>
+                          <td>1 750 500</td> 
                         </tr>
                       </tbody>
                   </Table>
