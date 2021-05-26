@@ -80,7 +80,7 @@ const fadeIn = useSpring(
           <animated.div style={fadeIn}>
             <ProductsHeading>{heading}</ProductsHeading>
             <ProductsWrapper>{getProducts(data)}</ProductsWrapper>
-            <ProductsHeading>{heading}</ProductsHeading>
+            <ProductsHeading></ProductsHeading>
                <Container>
                   <Table striped bordered hover>
                       <thead>
@@ -104,7 +104,7 @@ const fadeIn = useSpring(
                           <td>1720</td>
                           <td>2</td>
                           <td>145</td>
-                          <td>66 270</td>
+                          <td><b>66270 руб.</b></td>
                         </tr>
                         <tr>
                           <td>WRV 1000</td>
@@ -114,7 +114,7 @@ const fadeIn = useSpring(
                           <td>2200</td>
                           <td>2</td>
                           <td>165</td>
-                          <td>89 350</td>
+                          <td><b>89350 руб.</b></td>
                         </tr>
                         <tr>
                           <td>WRV 1500</td>
@@ -124,7 +124,7 @@ const fadeIn = useSpring(
                           <td>2350</td>
                           <td>2</td>
                           <td>244</td>
-                          <td>238 000</td> 
+                          <td><b>238000 руб.</b></td> 
                         </tr>
                         <tr>
                           <td>WRV 2000</td>
@@ -134,7 +134,7 @@ const fadeIn = useSpring(
                           <td>2450</td>
                           <td>2</td>
                           <td>375</td>
-                          <td>355 780</td> 
+                          <td><b>355780 руб.</b></td> 
                         </tr>
                         <tr>
                           <td>WRV 2500</td>
@@ -144,7 +144,7 @@ const fadeIn = useSpring(
                           <td>2800</td>
                           <td>2</td>
                           <td>307</td>
-                          <td>395 174</td> 
+                          <td><b>395174 руб.</b></td> 
                         </tr>
                         <tr>
                           <td>WRV 3000</td>
@@ -154,7 +154,7 @@ const fadeIn = useSpring(
                           <td>2700</td>
                           <td>2 1/2</td>
                           <td>550</td>
-                          <td>425 650</td> 
+                          <td><b>425650 руб.</b></td> 
                         </tr>
                         <tr>
                           <td>WRV 5000</td>
@@ -164,7 +164,7 @@ const fadeIn = useSpring(
                           <td>3100</td>
                           <td>3</td>
                           <td>655</td>
-                          <td>685 100</td> 
+                          <td><b>685100 руб.</b></td> 
                         </tr>
                         <tr>
                           <td>WRV 10 000</td>
@@ -174,7 +174,7 @@ const fadeIn = useSpring(
                           <td>5750</td>
                           <td>4</td>
                           <td>1920</td>
-                          <td>1 750 500</td> 
+                          <td><b>1750500 руб.</b></td> 
                         </tr>
                       </tbody>
                   </Table>

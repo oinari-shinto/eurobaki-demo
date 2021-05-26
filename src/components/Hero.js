@@ -17,7 +17,7 @@ export const Hero = ({HeaderMark}) => {
                     
                     {/* <HeroH1>Продажа и изготовление расширительных баков</HeroH1> */}
                     {/* <HeroP>Завод производство. Доставка по России</HeroP> */}
-                    <Button primary="true" big="true" round="true" to="/price">Купить</Button>
+                    <Button primary="true" big="true" round="true" to="/price">Заказать обратный звонок</Button>
                 </HeroItems>
             </HeroContent>
         </HeroContainer>

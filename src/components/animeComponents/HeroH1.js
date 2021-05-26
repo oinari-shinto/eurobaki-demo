@@ -2,7 +2,10 @@ import React from 'react'
 import { useSpring, animated } from 'react-spring'
 import styled from 'styled-components'
 
+
+
 export default function HeroH1({HeaderMark}) {
+    
     const fadeIn = useSpring(
         {
             from: { opacity: 0, transform: 'translateY(3rem)' },
@@ -10,18 +13,31 @@ export default function HeroH1({HeaderMark}) {
             config: { duration: 1000 }
         }
     )
-    return (
-        <animated.div style={fadeIn}>
-            <HeaderH1>
-            
-                {HeaderMark}
-            
 
-            </HeaderH1>
-            <HeroP>Завод производство. Доставка по России</HeroP>
-            
-        </animated.div>
-    )
+    if (HeaderMark) {
+        return (
+        
+            <animated.div style={fadeIn}>
+                <HeaderH1>                
+                    {HeaderMark}                    
+                </HeaderH1>
+                <HeroP>Завод производство. Доставка по России</HeroP>
+                
+            </animated.div>
+        )
+    }
+    else 
+    {
+        return (
+        
+            <animated.div style={fadeIn}>
+                <HeaderH1>ありがとうございます</HeaderH1>
+                <HeroP>Завод производство. Доставка по России</HeroP>                
+            </animated.div>
+        )
+    }
+    
+    
 }
 
 
