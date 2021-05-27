@@ -51,7 +51,7 @@ function getProducts(data) {
                 <ProductInfo>
                   <TextWrap>
                     <ImLocation />
-                    <ProductTitle to="/Wester">{item.node.name}</ProductTitle>
+                    <ProductTitle to="/wester">{item.node.name}</ProductTitle>
                   </TextWrap>
                   <Button to='/products' primary="true" round="true"
                   css={`
@@ -68,6 +68,7 @@ function getProducts(data) {
     })
     return productsArray
 }
+
 const fadeIn = useSpring(
   {
       from: { opacity: 0, transform: 'translateY(3rem)' },

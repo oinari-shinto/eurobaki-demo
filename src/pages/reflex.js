@@ -1,13 +1,14 @@
 import React from 'react'
+import Layout from '../layouts/mainLayout'
 
-const Wester = () => {
+const Reflex = () => {
     return (
-        <div>
+        <Layout>
             <h1>Reflex</h1>
             <p>Расширительные баки для отопления и водоснаюжения Reflex</p>
             <p>Производство Германия</p>
-        </div>
+        </Layout>
     )
 }
 
-export default Wester
+export default Reflex

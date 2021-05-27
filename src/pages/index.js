@@ -2,7 +2,7 @@ import * as React from "react"
 import { Link } from "gatsby"
 
 
-import Layout from "../layouts/MainLayout"
+import Layout from "../layouts/mainLayout"
 import SEO from "../components/seo"
 import { Hero } from "../components/Hero"
 import Products from "../components/Products"
