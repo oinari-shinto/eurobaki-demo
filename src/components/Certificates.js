@@ -1,9 +1,11 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
 import {IoMdCheckmarkCircleOutline} from 'react-icons/io'
 import {FaRegLightbulb} from 'react-icons/fa'
 import { graphql, useStaticQuery } from 'gatsby'
+import Aos from 'aos'
+import "aos/dist/aos.css"
 
 const Certificates = () => {
 
@@ -22,13 +24,16 @@ const Certificates = () => {
         }
       }
     `)
+    useEffect(() => {
+        Aos.init({ duration: 2000 });
+      }, [])
     return (
         <CertificatesContainer>
-            <TopLine>Сертификаты</TopLine>
-            <Description>Сертификаты на расширительные баки</Description>
+            <TopLine data-aos="fade-up-right">Сертификаты</TopLine>
+            <Description data-aos="fade-up-right">Сертификаты на расширительные баки</Description>
             <ContentWrapper>
-                <ColumOne>
-                    <Certificate>
+                <ColumOne data-aos="fade-up-left">
+                    <Certificate data-aos="flip-right">
                         <IoMdCheckmarkCircleOutline css={`
                         color: #3fffa8;
                         font-size: 2rem;
@@ -38,7 +43,7 @@ const Certificates = () => {
                         The greate tank in my live
                         </p>
                     </Certificate>
-                    <Certificate>
+                    <Certificate data-aos="flip-right">
                         <FaRegLightbulb css={`
                         color: #f9b19b;
                         font-size: 2rem;
@@ -47,7 +52,7 @@ const Certificates = () => {
                         <p>The tank in my live</p>
                     </Certificate>
                 </ColumOne>
-                <ColumTwo>
+                <ColumTwo data-aos="zoom-in">
                 {data.allFile.edges.map((image, key) => (
                     <Images key={key} fluid={image.node.childImageSharp.fluid}  />
                     ))}

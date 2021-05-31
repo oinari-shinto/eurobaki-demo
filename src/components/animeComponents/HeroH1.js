@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useSpring, animated, Spring } from 'react-spring';
 import styled from 'styled-components';
 import VisibilitySensor from "react-visibility-sensor";
-
+import Aos from 'aos';
+import "aos/dist/aos.css";
 
 
 // export default function HeroH1({HeaderMark}) {
@@ -14,76 +15,86 @@ import VisibilitySensor from "react-visibility-sensor";
 //             config: { duration: 1000 }
 //         }
 //     )
-const FadeInDirection = ({ isVisible, children }) => {
-    const props = useSpring({
-      opacity: isVisible ? 1 : 0,
-      transform: isVisible ? "translateY(0px)" : "translateY(50px)"
-    });
-    return <animated.div style={props}>{children}</animated.div>;
-  };
-  
-  export const FadeInContainer = ({ children }) => {
-    const [isVisible, setVisibility] = useState(false);
-  
-    const onChange = visiblity => {
-      visiblity && setVisibility(visiblity);
-    };
-  
-    return (
-      <VisibilitySensor onChange={onChange}>
-        <FadeInDirection isVisible={isVisible}>{children}</FadeInDirection>
-      </VisibilitySensor>
-    );
-  };
 
-      export default function HeroH1({HeaderMark}) {
-        return (
-          <div>
-            
-            <FadeInContainer>
-            <HeaderH1>{HeaderMark}</HeaderH1>
-            </FadeInContainer>
-            
-           
-       
-          </div>
-        );
-      }
+//Anime with scroll and view a part of content after scroll (react-spring)
+// const FadeInDirection = ({ isVisible, children }) => {
+//     const props = useSpring({
+//       opacity: isVisible ? 1 : 0,
+//       transform: isVisible ? "translateY(0px)" : "translateY(50px)"
+//     });
+//     return <animated.div style={props}>{children}</animated.div>;
+//   };
+  
+//   export const FadeInContainer = ({ children }) => {
+//     const [isVisible, setVisibility] = useState(false);
+  
+//     const onChange = visibility => {
+//       visibility && setVisibility(visibility);
+//     };
+  
+//     return (
+//       <VisibilitySensor onChange={onChange}>
+//         <FadeInDirection isVisible={isVisible}>{children}</FadeInDirection>
+//       </VisibilitySensor>
+//     );
+//   };
 
-//     if (HeaderMark) {
+//       export default function HeroH1({HeaderMark}) {
 //         return (
+//           <div>
             
+//             <FadeInContainer>
+//             <HeaderH1>{HeaderMark}</HeaderH1>
+//             </FadeInContainer>
+      
+//           </div>
+//         );
+//       }
 
-            
+
+//Animation with Aos
+
+export default function HeroH1({HeaderMark}) {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, [])
+  return (
+    <div>
+      
+      <HeaderH1 data-aos="fade-up">{HeaderMark}</HeaderH1>
+      <HeroP>Завод производство. Доставка по России</HeroP>
+
+    </div>
+    
+  );
+}
+
+
+
+//First animate with react spring
+//     if (HeaderMark) {
+//         return (           
 //         )
 //     }
 //     else 
 //     {
 //         return (
-        
 //             <animated.div style={fadeIn}>
 //                 <HeaderH1>ありがとうございます</HeaderH1>
 //                 <HeroP>Завод производство. Доставка по России</HeroP>                
 //             </animated.div>
 //         )
 //     }
-    
-    
 // }
 
 
-
-
-
-
-
-{/* <animated.div style={fadeIn}>
+/* <animated.div style={fadeIn}>
                 <HeaderH1>                
                     {HeaderMark}                    
                 </HeaderH1>
                 <HeroP>Завод производство. Доставка по России</HeroP>
                 
-            </animated.div> */}
+            </animated.div> */
 
 
 const HeaderH1 = styled.h1`
