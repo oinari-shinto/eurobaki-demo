@@ -96,12 +96,16 @@
             border-radius: 50px;
             border: none;
             margin-right: 1rem;
+            
         }
 
         @media screen and (max-width: 768px) {
             display: flex;
             flex-direction: column;
             padding: 0 1rem;
+            max-width: 100%;
+            
+            
 
             input {
                 margin-bottom: 1rem;

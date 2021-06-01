@@ -35,6 +35,7 @@ padding: 0.5rem calc((100vw - 1300px) /2);
 z-index: 100;
 position: relative;
 
+
 `
 const NavLink = styled(Link)`
   color: #fff;
@@ -44,6 +45,7 @@ const NavLink = styled(Link)`
   padding: 0 1rem;
   height: 100%;
   cursor: pointer;
+  
 `
 const Bars = styled(FaBars)`
   display: none;

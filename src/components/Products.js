@@ -80,6 +80,8 @@ const ProductsContainer = styled.div`
     background: transparent ;
     color: #fff;
     
+    
+    
 `
 /* animation: ${animateOpacity} 5s  , ${animatePosition} 2s ; */
 const ProductsHeading = styled.div`
@@ -111,11 +113,12 @@ const ProductsWrapper = styled.div`
 const ProductCard = styled.div`
   line-height: 2;
   width: 100%;
-  height: 100%;
+  height: 500px;
    /* 100% if i want see image */
   position: relative;
   border-radius: 10px;
   transition: 0.2s ease;
+  
   
   
 `
@@ -126,6 +129,7 @@ const ProductImg = styled(Img)`
   border-radius: 10px;
   filter: brightness(90%);
   transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+  
   
   
   &:hover {
@@ -140,9 +144,13 @@ const ProductInfo = styled.div`
   flex-direction: column;
   align-items: flex-start;
   padding: 0 2rem;
+  box-sizing: border-box;
+  max-width: 100%;
 
   @media screen and (max-width: 280px) {
     padding: 0 1rem;
+    box-sizing: border-box;
+  max-width: 100%;
   } 
 `
 
@@ -164,6 +172,8 @@ const ProductTitle = styled.div`
   flex-direction: column;
   justify-content: flex-end;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.2), transparent);
+  box-sizing: border-box;
+  max-width: 100%;
  
   
 `

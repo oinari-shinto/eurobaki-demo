@@ -36,7 +36,7 @@ export default function Component1() {
 const c1Style = {
     background: 'steelblue',
     color: 'white',
-    padding: '1.5rem'
+    
 }
 
 // const AnimatedHeader = styled(animated.h1)`

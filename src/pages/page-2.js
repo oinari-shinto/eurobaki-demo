@@ -13,7 +13,7 @@ const SecondPage = () => (
   <Layout>
     <SEO title="Page two" />
     <Component1/>
-    <Test/>
+    
     
     
     <Link to="/">Go back to the homepage</Link>

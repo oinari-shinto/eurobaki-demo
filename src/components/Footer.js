@@ -44,6 +44,7 @@ const FooterContainer = styled.div`
     grid-template-columns: repeat(2, 1fr);
     color: #000;
     background: #fafafb;
+    
 `
 const FooterDesc = styled.div`
     padding: 0 2rem;

@@ -11,7 +11,7 @@ const Certificates = () => {
 
     const data = useStaticQuery(graphql`
     query  {
-        allFile(filter: {ext: {regex: "/(jpg)|(png)|(jpeg)/"}, name: {in: ["sert_wester_2", "sert_wester_1" ]}}) {
+        allFile(filter: {ext: {regex: "/(jpg)|(png)|(jpeg)/"}, name: {in: ["sert_wester_1", "sert_zilmet" ]}}) {
           edges {
             node {
               childImageSharp {
@@ -24,16 +24,14 @@ const Certificates = () => {
         }
       }
     `)
-    useEffect(() => {
-        Aos.init({ duration: 2000 });
-      }, [])
+    
     return (
         <CertificatesContainer>
-            <TopLine data-aos="fade-up-right">Сертификаты</TopLine>
-            <Description data-aos="fade-up-right">Сертификаты на расширительные баки</Description>
+            <TopLine >Сертификаты</TopLine>
+            <Description >Сертификаты на расширительные баки</Description>
             <ContentWrapper>
-                <ColumOne data-aos="fade-up-left">
-                    <Certificate data-aos="flip-right">
+                <ColumOne >
+                    <Certificate >
                         <IoMdCheckmarkCircleOutline css={`
                         color: #3fffa8;
                         font-size: 2rem;
@@ -43,7 +41,7 @@ const Certificates = () => {
                         The greate tank in my live
                         </p>
                     </Certificate>
-                    <Certificate data-aos="flip-right">
+                    <Certificate >
                         <FaRegLightbulb css={`
                         color: #f9b19b;
                         font-size: 2rem;
@@ -52,7 +50,7 @@ const Certificates = () => {
                         <p>The tank in my live</p>
                     </Certificate>
                 </ColumOne>
-                <ColumTwo data-aos="zoom-in">
+                <ColumTwo>
                 {data.allFile.edges.map((image, key) => (
                     <Images key={key} fluid={image.node.childImageSharp.fluid}  />
                     ))}
@@ -70,6 +68,7 @@ const CertificatesContainer = styled.div`
     color: #000;
     padding: 5rem calc((100vw - 1300px) / 2);
     height: 100%;
+
 `
 
 const TopLine = styled.p`
@@ -92,6 +91,7 @@ const ContentWrapper = styled.div`
     grid-template-columns: 1fr 1fr;
     padding: 0 2rem;
     
+    
     @media screen and (max-width: 768px) {
         
         grid-template-columns: 1fr;
@@ -106,6 +106,7 @@ const ColumOne = styled.div`
 const Certificate = styled.div`
     padding-top: 1rem;
     padding-right: 2rem;
+    
 
     h3 {
         margin-bottom: 1rem;
@@ -123,10 +124,11 @@ const ColumTwo = styled.div`
     grid-template-columns: 1fr 1fr;
     margin-top: 2rem;
     grid-gap: 10px;
+    
 
     @media screen and (max-width: 500px) {
         grid-template-columns: 1fr;
-    }
+    } 
 `
 
 const Images = styled(Img)`

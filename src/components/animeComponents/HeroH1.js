@@ -55,13 +55,11 @@ import "aos/dist/aos.css";
 //Animation with Aos
 
 export default function HeroH1({HeaderMark}) {
-  useEffect(() => {
-    Aos.init({ duration: 2000 });
-  }, [])
+  
   return (
     <div>
       
-      <HeaderH1 data-aos="fade-up">{HeaderMark}</HeaderH1>
+      <HeaderH1>{HeaderMark}</HeaderH1>
       <HeroP>Завод производство. Доставка по России</HeroP>
 
     </div>

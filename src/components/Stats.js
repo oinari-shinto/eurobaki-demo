@@ -34,12 +34,14 @@ const StatsContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     padding: 4rem calc((100vw - 1300px) / 2 );
+    
 `
 const Heading = styled.h1`
     text-align: start;
     font-size: clamp(1.5rem, 5vw, 2rem);
     margin-bottom: 3rem;
     padding: 0 2rem;
+    
 `
 const Wrapper = styled.div`
     display: grid;
@@ -73,5 +75,5 @@ const Title = styled.p`
 `
 
 const Description = styled.p`
-    font-size:
+    
 `
