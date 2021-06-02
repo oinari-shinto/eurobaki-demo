@@ -4,8 +4,7 @@ import Img from 'gatsby-image'
 import {IoMdCheckmarkCircleOutline} from 'react-icons/io'
 import {FaRegLightbulb} from 'react-icons/fa'
 import { graphql, useStaticQuery } from 'gatsby'
-import Aos from 'aos'
-import "aos/dist/aos.css"
+
 
 const Certificates = () => {
 

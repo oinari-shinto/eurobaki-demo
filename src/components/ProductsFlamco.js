@@ -6,7 +6,7 @@ import { Button } from './Button'
 import { resetWarningCache } from 'prop-types'
 import {ImLocation} from 'react-icons/im'
 import Link from 'gatsby-link'
-import { useSpring, animated } from 'react-spring'
+
 
 const ProductsFlamco = ({ heading }) => {
 const data = useStaticQuery(graphql`
@@ -63,19 +63,13 @@ function getProducts(data) {
     })
     return productsArray
 }
-const fadeIn = useSpring(
-  {
-      from: { opacity: 0, transform: 'translateY(3rem)' },
-      to: { opacity: 1, transform: 'translateY(-1rem)' },
-      config: { duration: 1000 }
-  }
-)
+
     return (
         <ProductsContainer>
-          <animated.div style={fadeIn}>
+          
             <ProductsHeading>{heading}</ProductsHeading>
             <ProductsWrapper>{getProducts(data)}</ProductsWrapper>
-          </animated.div>  
+          
         </ProductsContainer>
     )
 }

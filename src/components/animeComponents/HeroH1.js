@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
-import { useSpring, animated, Spring } from 'react-spring';
+import React from "react";
+
 import styled from 'styled-components';
-import VisibilitySensor from "react-visibility-sensor";
-import Aos from 'aos';
-import "aos/dist/aos.css";
+
+
+
 
 
 // export default function HeroH1({HeaderMark}) {

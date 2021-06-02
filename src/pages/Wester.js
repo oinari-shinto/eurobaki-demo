@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import { useSpring, animated  } from 'react-spring';
+
 
 import Layout from "../layouts/mainLayout"
 import SEO from "../components/seo"
