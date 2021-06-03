@@ -1,11 +1,54 @@
-import React from "react";
-
+import React, {useRef, useEffect} from "react";
 import styled from 'styled-components';
 
+import { gsap } from "gsap";
 
 
 
 
+export default function HeroH1({HeaderMark}) {
+
+  let headerRef = useRef(null);
+
+  useEffect(() => {
+    gsap.from(headerRef.current, {
+      duration: 3,
+      autoAlpha: 0,
+      ease: 'none',
+      delay: 1
+    })
+    
+    }, [])
+  
+  
+  return (
+    <AnimeHeader ref={headerRef}>
+      <HeaderH1 >{HeaderMark}</HeaderH1>
+      <HeroP>Завод производство. Доставка по России</HeroP>
+    </AnimeHeader>
+    
+  );
+}
+
+const AnimeHeader = styled.div`
+  opacity: 1;
+  
+`
+
+
+const HeaderH1 = styled.h1`
+    opacity: 1;
+    font-size: clamp(1.5rem, 6vw, 4rem);
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+    padding: 0 1rem;
+`
+const HeroP = styled.p`
+    opacity: 1;
+    font-size: clamp(1rem, 3vw, 3rem);
+    margin-bottom: 2rem;
+    font-weight: 400;
+`
 // export default function HeroH1({HeaderMark}) {
     
 //     const fadeIn = useSpring(
@@ -54,21 +97,6 @@ import styled from 'styled-components';
 
 //Animation with Aos
 
-export default function HeroH1({HeaderMark}) {
-  
-  return (
-    <div>
-      
-      <HeaderH1>{HeaderMark}</HeaderH1>
-      <HeroP>Завод производство. Доставка по России</HeroP>
-
-    </div>
-    
-  );
-}
-
-
-
 //First animate with react spring
 //     if (HeaderMark) {
 //         return (           
@@ -95,14 +123,3 @@ export default function HeroH1({HeaderMark}) {
             </animated.div> */
 
 
-const HeaderH1 = styled.h1`
-    font-size: clamp(1.5rem, 6vw, 4rem);
-    margin-bottom: 1.5rem;
-    letter-spacing: 1px;
-    padding: 0 1rem;
-`
-const HeroP = styled.p`
-    font-size: clamp(1rem, 3vw, 3rem);
-    margin-bottom: 2rem;
-    font-weight: 400;
-`
