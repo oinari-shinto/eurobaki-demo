@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef, useEffect } from 'react'
 import styled from 'styled-components'
 import {useStaticQuery, graphql} from 'gatsby'
 import Img from 'gatsby-image'
@@ -6,6 +6,8 @@ import { Button } from './Button'
 import { resetWarningCache } from 'prop-types'
 import {ImLocation} from 'react-icons/im'
 import Link from 'gatsby-link'
+import { gsap } from "gsap";
+import { Elastic } from 'gsap/gsap-core'
 
 const Products = ({ heading }) => {
 const data = useStaticQuery(graphql`
@@ -30,6 +32,19 @@ const data = useStaticQuery(graphql`
     }
   }
 `)
+//Anime
+let productRef = useRef(null);
+
+  useEffect(() => {
+    gsap.from(productRef.current, {
+      duration: 3,
+      autoAlpha: 0,
+      ease: 'none',
+      delay: 1
+    })
+    
+    }, [])
+
 // for productImg
 // src={item.node.img.childImageSharp.fluid}
 function getProducts(data) {
@@ -61,9 +76,10 @@ function getProducts(data) {
     })
     return productsArray
 }
+
     return (
-        <ProductsContainer>
-            <ProductsHeading>{heading}</ProductsHeading>
+        <ProductsContainer ref = {productRef}>
+            <ProductsHeading >{heading}</ProductsHeading>
             <ProductsWrapper>{getProducts(data)}</ProductsWrapper>
         </ProductsContainer>
     )
@@ -82,10 +98,11 @@ const ProductsContainer = styled.div`
     
     
     
+    
 `
 /* animation: ${animateOpacity} 5s  , ${animatePosition} 2s ; */
 const ProductsHeading = styled.div`
-    
+    opacity: 1;
     font-size: clamp(1.2rem, 5vw, 3rem);
     margin-bottom: 5rem;
     text-align: center;
