@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import {useStaticQuery, graphql} from 'gatsby'
 import Img from 'gatsby-image'
@@ -6,8 +6,8 @@ import { Button } from './Button'
 import { resetWarningCache } from 'prop-types'
 import {ImLocation} from 'react-icons/im'
 import Link from 'gatsby-link'
-import { gsap } from "gsap";
-import { Elastic } from 'gsap/gsap-core'
+
+
 
 const Products = ({ heading }) => {
 const data = useStaticQuery(graphql`
@@ -32,18 +32,6 @@ const data = useStaticQuery(graphql`
     }
   }
 `)
-//Anime
-let productRef = useRef(null);
-
-  useEffect(() => {
-    gsap.from(productRef.current, {
-      duration: 3,
-      autoAlpha: 0,
-      ease: 'none',
-      delay: 1
-    })
-    
-    }, [])
 
 // for productImg
 // src={item.node.img.childImageSharp.fluid}
@@ -78,7 +66,7 @@ function getProducts(data) {
 }
 
     return (
-        <ProductsContainer ref = {productRef}>
+        <ProductsContainer>
             <ProductsHeading >{heading}</ProductsHeading>
             <ProductsWrapper>{getProducts(data)}</ProductsWrapper>
         </ProductsContainer>

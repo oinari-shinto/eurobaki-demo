@@ -17,17 +17,25 @@ import { gsap } from "gsap";
 
 
 const IndexPage = () =>  {
-    let mainRef = useRef(null);
-    useEffect(() => {
-      gsap.from(mainRef.current, {duration: 1, autoAlpha: 0, ease: 'none', delay: 2})
+  let multiPageRef = useRef(null);
+
+  useEffect(() => {
+    gsap.from(multiPageRef.current, {
+      duration: 3,
+      autoAlpha: 0,
+      ease: 'none',
+      delay: 2
     })
+    
+    }, [])
     return (
-    <Layout>
-      <SEO title="Home" />
+    <Layout >
+      <div><SEO title="Home" /></div>
       <Hero HeaderMark="Продажа и изготовление расширительных баков"/>
-      <Products   heading="Выберите расширительный бак"/>
+      <div ref={multiPageRef}><Products   heading="Выберите расширительный бак"/></div>
+      
       <Certificates  />
-      <Stats />
+      <Stats  />
       <Email />
       
       
