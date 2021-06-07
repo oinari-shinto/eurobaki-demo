@@ -12,19 +12,29 @@ import Email from "../components/Email"
 import Footer from "../components/Footer"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { gsap } from "gsap";
-
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 
 
 const IndexPage = () =>  {
-  let multiPageRef = useRef(null);
-
+  //let multiPageRef = useRef(null);
+  
   useEffect(() => {
-    gsap.from(multiPageRef.current, {
+    
+    gsap.from(".prodAnime", {
       duration: 3,
       autoAlpha: 0,
       ease: 'none',
-      delay: 2
+      delay: 3,
+      scrollTrigger: {
+        trigger: ".prodAnime",
+        start: "top 90%",
+        end: "bottom 10%",
+        
+        markers: true,
+        toggleActions: "restart reset restart reset",
+      }
     })
     
     }, [])
@@ -32,7 +42,7 @@ const IndexPage = () =>  {
     <Layout >
       <div><SEO title="Home" /></div>
       <Hero HeaderMark="Продажа и изготовление расширительных баков"/>
-      <div ref={multiPageRef}><Products   heading="Выберите расширительный бак"/></div>
+      <div className="prodAnime"><Products heading="Выберите расширительный бак"/></div>
       
       <Certificates  />
       <Stats  />
@@ -50,3 +60,5 @@ const IndexPage = () =>  {
 
  
 export default IndexPage
+
+// const prodSection = styled.div``
