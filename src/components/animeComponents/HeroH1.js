@@ -2,38 +2,44 @@ import React, {useRef, useEffect} from "react";
 import styled from 'styled-components';
 
 import { gsap } from "gsap";
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 
 
 
 export default function HeroH1({HeaderMark}) {
 
-  let headerRef = useRef(null);
+  // let headerRef = useRef(null);
 
   useEffect(() => {
-    gsap.from(headerRef.current, {
+    gsap.from(".headerAnime", {
       duration: 3,
       autoAlpha: 0,
       ease: 'none',
-      delay: 1
+      delay: 1,
+      scrollTrigger: {
+        trigger: ".headerAnime",
+        start: "top 100%",
+        end: "bottom 10%",
+        toggleActions: "restart reset restart reset",
+      }
+
     })
     
     }, [])
   
   
   return (
-    <AnimeHeader ref={headerRef}>
-      <HeaderH1 >{HeaderMark}</HeaderH1>
+    <AnimeHeader className="headerAnime">
+      <HeaderH1>{HeaderMark}</HeaderH1>
       <HeroP>Завод производство. Доставка по России</HeroP>
     </AnimeHeader>
     
   );
 }
 
-const AnimeHeader = styled.div`
-  opacity: 1;
-  
-`
+const AnimeHeader = styled.div``
 
 
 const HeaderH1 = styled.h1`

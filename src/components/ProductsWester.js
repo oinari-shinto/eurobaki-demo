@@ -9,6 +9,7 @@ import Link from 'gatsby-link'
 
 
 
+
 const ProductsWester = ({ heading }) => {
 const data = useStaticQuery(graphql`
  query ProductsQueryWester {

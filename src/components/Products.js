@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import styled from 'styled-components'
 import {useStaticQuery, graphql} from 'gatsby'
 import Img from 'gatsby-image'
@@ -6,10 +6,28 @@ import { Button } from './Button'
 import { resetWarningCache } from 'prop-types'
 import {ImLocation} from 'react-icons/im'
 import Link from 'gatsby-link'
-
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 
 const Products = ({ heading }) => {
+  useEffect(() => {
+      
+    gsap.from(".prodAnime", {
+      duration: 3,
+      autoAlpha: 0,
+      ease: 'none',
+      delay: 3,
+      scrollTrigger: {
+        trigger: ".prodAnime",
+        start: "top 90%",
+        end: "bottom 10%",
+        markers: true,
+        toggleActions: "restart reset restart reset",
+      }
+    })
+  }, [])
 const data = useStaticQuery(graphql`
  query ProductsQuery  {
     allProductsJson (limit: 4) {
@@ -36,6 +54,7 @@ const data = useStaticQuery(graphql`
 // for productImg
 // src={item.node.img.childImageSharp.fluid}
 function getProducts(data) {
+    
     const productsArray = []
     data.allProductsJson.edges.forEach((item, index) => {
         productsArray.push(
@@ -68,7 +87,7 @@ function getProducts(data) {
     return (
         <ProductsContainer>
             <ProductsHeading >{heading}</ProductsHeading>
-            <ProductsWrapper>{getProducts(data)}</ProductsWrapper>
+            <ProductsWrapper className="prodAnime">{getProducts(data)}</ProductsWrapper>
         </ProductsContainer>
     )
 }

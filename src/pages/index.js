@@ -1,7 +1,7 @@
-import React, { useEffect, useRef } from "react"
+import React, {useEffect} from "react"
 import { Link } from "gatsby"
 
-
+import styled from 'styled-components'
 import Layout from "../layouts/mainLayout"
 import SEO from "../components/seo"
 import { Hero } from "../components/Hero"
@@ -11,39 +11,45 @@ import Stats from "../components/Stats"
 import Email from "../components/Email"
 import Footer from "../components/Footer"
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import TableWester from "../components/dataTables/TableWester"
+import TableReflex from "../components/dataTables/TableReflex"
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger);
+gsap.defaults({ease: "none", duration: 2});
+
 
 
 
 const IndexPage = () =>  {
-  //let multiPageRef = useRef(null);
-  
-  useEffect(() => {
+    const tl = gsap.timeline();
+    useEffect(() => {
+      
+      tl.from('.westerTable', {xPercent: -100})
+        .from('.reflexTable', {xPercent: 100});
     
-    gsap.from(".prodAnime", {
-      duration: 3,
-      autoAlpha: 0,
-      ease: 'none',
-      delay: 3,
-      scrollTrigger: {
-        trigger: ".prodAnime",
-        start: "top 90%",
-        end: "bottom 10%",
-        
-        markers: true,
-        toggleActions: "restart reset restart reset",
-      }
+    ScrollTrigger.create({
+      animation: tl,
+      trigger: ".container",
+      start: "top top",
+      end: "+=4000",
+      scrub: true,
+      pin: true,
+      anticipatePin: 1
     })
-    
     }, [])
+    
+
+
     return (
     <Layout >
-      <div><SEO title="Home" /></div>
+      <SEO title="Home" />
       <Hero HeaderMark="Продажа и изготовление расширительных баков"/>
-      <div className="prodAnime"><Products heading="Выберите расширительный бак"/></div>
-      
+      <Products heading="Выберите расширительный бак"/>
+      <div className="container">
+        <TableWester className="westerTable"/>
+        {/* <TableReflex className="reflexTable"/> */}
+      </div>
       <Certificates  />
       <Stats  />
       <Email />
@@ -61,4 +67,4 @@ const IndexPage = () =>  {
  
 export default IndexPage
 
-// const prodSection = styled.div``
+const Container = styled.div``
