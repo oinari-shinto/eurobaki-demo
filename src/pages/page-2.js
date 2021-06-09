@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 import Layout from "../layouts/mainLayout"
 import SEO from "../components/seo"
 import Component1 from "../components/Component1"
-import Test from "../components/Test";
+
 import { gsap } from "gsap";
 
 
