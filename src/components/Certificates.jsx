@@ -6,6 +6,7 @@ import {FaRegLightbulb} from 'react-icons/fa'
 import { graphql, useStaticQuery } from 'gatsby'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import Scrollable from './hooks/Scrollable'
 gsap.registerPlugin(ScrollTrigger);
 gsap.defaults({ease: "none", duration: 2});
 
@@ -29,7 +30,7 @@ const Certificates = () => {
 
     const data = useStaticQuery(graphql`
     query  {
-        allFile(filter: {ext: {regex: "/(jpg)|(png)|(jpeg)/"}, name: {in: ["sert_wester_1" ]}}) {
+        allFile(filter: {ext: {regex: "/(jpg)|(png)|(jpeg)/"}, name: {in: ["sert_wester_1" "sert_wester_2" ]}}) {
           edges {
             node {
               childImageSharp {
@@ -85,12 +86,23 @@ const Certificates = () => {
                     </Certificate>
                 </ColumOne>
                 <ColumTwo >
-                {data.allFile.edges.map((image, key) => (
-                    <Images className="container" key={key} fluid={image.node.childImageSharp.fluid}  />
-                    ))}
+                    <ContainerTwo>
+                    <Scrollable _class='data'>
+                        {data.allFile.edges.map((image, key) => (
+                            <div>
+                            <Images className="container" key={key} fluid={image.node.childImageSharp.fluid}  />
+                            </div>
+                        ))}
+                    </Scrollable>
+                    </ContainerTwo>
+                    
+                
                 </ColumTwo>
+                
             </ContentWrapper>
+            
         </CertificatesContainer>
+        
     )
 }
 
@@ -104,6 +116,7 @@ const CertificatesContainer = styled.div`
     height: 100%;
     white-space: pre-line;
 `
+
 
 const TopLine = styled.p`
     color: #077bf1;
@@ -159,19 +172,32 @@ const Certificate = styled.div`
 
 const ColumTwo = styled.div`
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 2fr 2fr;
+    
     margin-top: 2rem;
     grid-gap: 10px;
+    overflow-x: scroll;
+   
     
 
     @media screen and (max-width: 500px) {
         grid-template-columns: 1fr;
     } 
 `
+const ContainerTwo = styled.div`
+    /* display: flex;
+    flex-direction: row; */
+    
+    padding: 10px;
+    
+`
 
 const Images = styled(Img)`
     border-radius: 10px;
-    height: 100%;
+    width: 350px;
+   
+    
+
 `
 
 
