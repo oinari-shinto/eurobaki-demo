@@ -22,7 +22,7 @@ const Scrollable = (props) => {
     return (
         <div
         ref={ref}
-        className={props.}
+        className={props}
         >
              {props.children}
         </div>
