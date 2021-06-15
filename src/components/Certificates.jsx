@@ -30,7 +30,7 @@ const Certificates = () => {
 
     const data = useStaticQuery(graphql`
     query  {
-        allFile(filter: {ext: {regex: "/(jpg)|(png)|(jpeg)/"}, name: {in: ["sert_wester_1" "sert_wester_2" ]}}) {
+        allFile(filter: {ext: {regex: "/(jpg)|(png)|(jpeg)/"}, name: {in: ["sert_wester_1", "sert_wester_2" ]}}) {
           edges {
             node {
               childImageSharp {
@@ -85,20 +85,20 @@ const Certificates = () => {
                         </p>
                     </Certificate>
                 </ColumOne>
-                <ColumTwo >
-                    <ContainerTwo>
-                    <Scrollable _class='data'>
-                        {data.allFile.edges.map((image, key) => (
-                            <div>
-                            <Images className="container" key={key} fluid={image.node.childImageSharp.fluid}  />
-                            </div>
-                        ))}
-                    </Scrollable>
-                    </ContainerTwo>
-                    
+                <ContainerScroll>
+                <Scrollable _class='data'>
+                    <ColumTwo >   
+                                      
+                            {data.allFile.edges.map((image, key) => (
+                                <div>
+                                <Images className="container" key={key} fluid={image.node.childImageSharp.fluid}  />
+                                </div>
+                            ))}
+                            
+                    </ColumTwo>
                 
-                </ColumTwo>
-                
+                </Scrollable>
+                </ContainerScroll>
             </ContentWrapper>
             
         </CertificatesContainer>
@@ -107,6 +107,8 @@ const Certificates = () => {
 }
 
 export default Certificates
+
+
 
 const CertificatesContainer = styled.div`
     width: 100%;
@@ -171,12 +173,14 @@ const Certificate = styled.div`
 `
 
 const ColumTwo = styled.div`
-    display: grid;
-    grid-template-columns: 2fr 2fr;
-    
+    /* display: grid;
+    grid-template-rows: 1fr;
+    white-space: pre-line; */
+    display:flex;
+    flex-direction: row;
     margin-top: 2rem;
     grid-gap: 10px;
-    overflow-x: scroll;
+    
    
     
 
@@ -184,18 +188,17 @@ const ColumTwo = styled.div`
         grid-template-columns: 1fr;
     } 
 `
-const ContainerTwo = styled.div`
-    /* display: flex;
-    flex-direction: row; */
+const ContainerScroll = styled.div`
+    max-width: 600px;
+    overflow-x: scroll;
     
-    padding: 10px;
+    
     
 `
-
 const Images = styled(Img)`
     border-radius: 10px;
-    width: 350px;
-   
+    height: 750px;
+    min-width: 580px;
     
 
 `
