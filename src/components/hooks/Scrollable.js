@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 
-const Scrollable = props => {
+const Scrollable = (props) => {
     let ref = useRef();
     useEffect(() => {
         const el = ref.current 
@@ -22,11 +22,9 @@ const Scrollable = props => {
     return (
         <div
         ref={ref}
-        className={props._class}
+        className={props.}
         >
-            {
-                React.Children.map(props.children, child => React.Children.only(child))
-            }
+             {props.children}
         </div>
     )
 }

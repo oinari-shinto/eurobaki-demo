@@ -6,7 +6,9 @@ import {FaRegLightbulb} from 'react-icons/fa'
 import { graphql, useStaticQuery } from 'gatsby'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import HorizontalScroll from 'react-scroll-horizontal'
 import Scrollable from './hooks/Scrollable'
+
 gsap.registerPlugin(ScrollTrigger);
 gsap.defaults({ease: "none", duration: 2});
 
@@ -48,7 +50,9 @@ const Certificates = () => {
         <CertificatesContainer>
             <TopLine >Сертификаты</TopLine>
             <Description >Сертификаты на расширительные баки</Description>
+           
             <ContentWrapper>
+             
                 <ColumOne >
                     <Certificate >
                         <IoMdCheckmarkCircleOutline css={`
@@ -84,21 +88,26 @@ const Certificates = () => {
                         • Баки от 200 до 10 000 литров могут изготавливаться в специальном исполнении 16 бар, 25 бар. 
                         </p>
                     </Certificate>
+                    
                 </ColumOne>
+                
                 <ContainerScroll>
-                <Scrollable _class='data'>
+                <HorizontalScroll>
+                {/* <Scrollable _class="data"> */}
                     <ColumTwo >   
-                                      
+                    
                             {data.allFile.edges.map((image, key) => (
                                 <div>
                                 <Images className="container" key={key} fluid={image.node.childImageSharp.fluid}  />
                                 </div>
                             ))}
-                            
+                        
                     </ColumTwo>
+               {/*  </Scrollable> */}
+                </HorizontalScroll>
                 
-                </Scrollable>
                 </ContainerScroll>
+                
             </ContentWrapper>
             
         </CertificatesContainer>
