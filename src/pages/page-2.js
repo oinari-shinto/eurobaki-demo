@@ -1,4 +1,4 @@
-import  React, {useRef, useEffect} from "react"
+import  React, {useRef, useEffect, Component } from "react"
 import { Link } from "gatsby"
 
 

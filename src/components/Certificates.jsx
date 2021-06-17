@@ -9,6 +9,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import HorizontalScroll from 'react-scroll-horizontal'
 import Scrollable from './hooks/Scrollable'
 
+
 gsap.registerPlugin(ScrollTrigger);
 gsap.defaults({ease: "none", duration: 2});
 
@@ -92,7 +93,8 @@ const Certificates = () => {
                 </ColumOne>
                 
                 <ContainerScroll>
-                <HorizontalScroll>
+               
+                {/* <HorizontalScroll> */}
                 {/* <Scrollable _class="data"> */}
                     <ColumTwo >   
                     
@@ -104,7 +106,7 @@ const Certificates = () => {
                         
                     </ColumTwo>
                {/*  </Scrollable> */}
-                </HorizontalScroll>
+               {/*  </HorizontalScroll> */}
                 
                 </ContainerScroll>
                 
