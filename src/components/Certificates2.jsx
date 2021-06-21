@@ -17,6 +17,30 @@ import { duration } from 'moment'
 gsap.registerPlugin(ScrollTrigger);
 gsap.defaults({ease: "none", duration: 2});
 
+const data = [
+    {
+      name: "Julia Cameron",
+      title: "Creative Director, VISA",
+      image: `${require("../assets/images/sert_wester_1.jpg")}`,
+      quote:
+        "It's all good. I was amazed at the quality of the Design. We've seen amazing results already."
+    },
+    {
+      name: "Mark Jacobs",
+      title: "Tech Lead, Google",
+      image: `${require("../assets/images/sert_wester_2.jpg")}`,
+      quote:
+        "The rebranding has really helped our business. Definitely worth the investment."
+    },
+    {
+      name: "Lisa Bearings",
+      title: "Brand Coordinator, Facebook",
+      image: `${require("../assets/images/sert_zilmet.jpg")}`,
+      quote:
+        "The service was excellent. Absolutely wonderful! A complete redesign did it for us."
+    }
+  ];
+
 const Certificates = () => {
     
     let imageList = useRef(null);
@@ -36,21 +60,21 @@ const Certificates = () => {
     }, []);
 
     //image tansition
-    const sledeLeft = (index, duration, multiplied = 1) => {
+    const slideLeft = (index, duration, multiplied = 1) => {
         TweenLite.to(imageList.children[index], duration, {
             x: -imageWidth * multiplied,
             ease: Power3.easeOut
         });
     };
 
-    const sledeRight = (index, duration, multiplied = 1) => {
+    const slideRight = (index, duration, multiplied = 1) => {
         TweenLite.to(imageList.children[index], duration, {
             x: imageWidth * multiplied,
             ease: Power3.easeOut
         });
     };
 
-    const scale = (insex, duration) => {
+    const scale = (index, duration) => {
         TweenLite.from(imageList.children[index], duration, {
             scale: 1.2,
             ease: Power3.easeOut
@@ -143,9 +167,9 @@ const Certificates = () => {
 
     //Old data
 
-    let data = useStaticQuery(graphql`
+    /* let data = useStaticQuery(graphql`
     query  {
-        allFile(filter: {ext: {regex: "/(jpg)|(png)|(jpeg)/"}, name: {in: ["sert_wester_1", "sert_wester_2" ]}}) {
+        allFile(filter: {ext: {regex: "/(jpg)|(png)|(jpeg)/"}, name: {in: ["sert_wester_1", "sert_wester_2", "sert_zilmet" ]}}) {
           edges {
             node {
               childImageSharp {
@@ -158,7 +182,11 @@ const Certificates = () => {
         }
       }
     `)
-    
+    {data.allFile.edges.map((image, key) => (
+        <div>
+        <Images className="container" key={key} fluid={image.node.childImageSharp.fluid}  />
+        </div>
+    ))} */
     return (
         <CertificatesContainer>
             <TopLine >Сертификаты</TopLine>
@@ -218,33 +246,33 @@ const Certificates = () => {
                         <div className="t-image">
                             <ul ref={el => (imageList = el)}>
                             <li className={state.isActive1 ? "active" : ""}>
-                                <img src={testimonials[0].image} alt={testimonials[0].name} />
+                                <img src={data[0]}  />
                             </li>
                             <li className={state.isActive2 ? "active" : ""}>
-                                <img src={testimonials[1].image} alt={testimonials[0].name} />
+                                <img src={data[1]} />
                             </li>
                             <li className={state.isActive3 ? "active" : ""}>
-                                <img src={testimonials[2].image} alt={testimonials[0].name} />
+                                <img src={data[2]}  />
                             </li>
                             </ul>
                         </div>
                         <div className="t-content">
-                            <ul ref={el => (testimonialList = el)}>
+                            <ul ref={el => (dataList = el)}>
                             <li className={state.isActive1 ? "active" : ""}>
                                 <div className="content-inner">
-                                <p className="quote">{testimonials[0].quote}</p>
+                                
                                 
                                 </div>
                             </li>
                             <li className={state.isActive2 ? "active" : ""}>
                                 <div className="content-inner">
-                                <p className="quote">{testimonials[1].quote}</p>
+                                
                                 
                                 </div>
                             </li>
                             <li className={state.isActive3 ? "active" : ""}>
                                 <div className="content-inner">
-                                <p className="quote">{testimonials[2].quote}</p>
+                                
                                 
                                 </div>
                             </li>
@@ -256,11 +284,7 @@ const Certificates = () => {
                         </div>
 
 
-                            {data.allFile.edges.map((image, key) => (
-                                <div>
-                                <Images className="container" key={key} fluid={image.node.childImageSharp.fluid}  />
-                                </div>
-                            ))}
+                           
                         
                     </ColumTwo>
                {/*  </Scrollable> */}

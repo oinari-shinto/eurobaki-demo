@@ -28,7 +28,7 @@ const SecondPage = () =>  {
       <SEO title="Page two" />
       <div ref={headerRef}>
       <Component1 />
-      {/* <Certificates2/> */}
+      <Certificates2/>
 
       </div>
       
