@@ -33,7 +33,7 @@ const Certificates = () => {
 
     const data = useStaticQuery(graphql`
     query  {
-        allFile(filter: {ext: {regex: "/(jpg)|(png)|(jpeg)/"}, name: {in: ["sert_wester_1", "sert_wester_2" ]}}) {
+        allFile(filter: {ext: {regex: "/(jpg)|(png)|(jpeg)/"}, name: {in: ["cert_wester_1", "cert_wester_2" ]}}) {
           edges {
             node {
               childImageSharp {

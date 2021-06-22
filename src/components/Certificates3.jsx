@@ -11,9 +11,10 @@ import Scrollable from './hooks/Scrollable'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 import { Carousel } from 'react-bootstrap'
-import slide1 from '../assets/images/sert_wester_1.jpg'
-import slide2 from '../assets/images/sert_wester_2.jpg'
-import slide3 from '../assets/images/sert_zilmet.jpg'
+import slide1 from '../assets/images/cert_wester_1.jpg'
+import slide2 from '../assets/images/cert_wester_2.jpg'
+import slide3 from '../assets/images/cert_zilmet.jpg'
+import { height } from 'dom-helpers'
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.defaults({ease: "none", duration: 2});
@@ -102,7 +103,17 @@ const Certificates = () => {
                 {/* <HorizontalScroll> */}
                 {/* <Scrollable _class="data"> */}
                     <ColumTwo >   
-
+                        <Carousel>
+                            <Carousel.Item>
+                                <img css={`height: 700px; weight: 100%`} src={slide1} alt="Certificate Wester"/>
+                            </Carousel.Item>
+                            <Carousel.Item>
+                                <img css={`height: 700px; weight: 100%`} src={slide2} alt="Certificate Wester2"/>
+                            </Carousel.Item>
+                            <Carousel.Item>
+                                 <img css={`height: 700px; weight: 100%`} src={slide3} alt="Certificate Zilmet"/>
+                            </Carousel.Item>
+                        </Carousel>
 
 
                             {/* {data.allFile.edges.map((image, key) => (
@@ -191,31 +202,33 @@ const Certificate = styled.div`
 `
 
 const ColumTwo = styled.div`
-    /* display: grid;
+    display: grid;
     grid-template-rows: 1fr;
-    white-space: pre-line; */
-    display:flex;
+    white-space: pre-line;
+    height: 200px;
+    /* display:flex;
     flex-direction: row;
     margin-top: 2rem;
-    grid-gap: 10px;
+    grid-gap: 10px; */
     
    
     
 
     @media screen and (max-width: 500px) {
         grid-template-columns: 1fr;
+        height: auto;
     } 
 `
 const ContainerScroll = styled.div`
-    max-width: 600px;
-    overflow-x: scroll;
+   /*  max-width: 600px; */
+    /* overflow-x: scroll; */
     
     
     
 `
 const Images = styled(Img)`
     border-radius: 10px;
-    height: 750px;
+    height: 100%;
     min-width: 580px;
     
 
