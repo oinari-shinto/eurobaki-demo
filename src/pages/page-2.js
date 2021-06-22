@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 import Component1 from "../components/Component1"
 
 import { gsap } from "gsap";
-import Certificates2 from "../components/Certificates2"
+import Certificates3 from "../components/Certificates3"
 
 
 
@@ -28,7 +28,7 @@ const SecondPage = () =>  {
       <SEO title="Page two" />
       <div ref={headerRef}>
       <Component1 />
-      <Certificates2/>
+      <Certificates3/>
 
       </div>
       

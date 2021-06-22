@@ -11,7 +11,7 @@ import Scrollable from './hooks/Scrollable'
 
 import leftArrow from '../assets/images/arrow-left.svg'
 import rightArrow from '../assets/images/arrow-right.svg'
-import { duration } from 'moment'
+
 
 
 gsap.registerPlugin(ScrollTrigger);
