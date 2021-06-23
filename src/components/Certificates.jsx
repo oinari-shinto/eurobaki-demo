@@ -184,13 +184,14 @@ const Certificate = styled.div`
 `
 
 const ColumTwo = styled.div`
-    /* display: grid;
-    grid-template-rows: 1fr;
-    white-space: pre-line; */
-    display:flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    white-space: pre-line;
+    grid-gap: 10px;
+    /* display:flex;
     flex-direction: row;
     margin-top: 2rem;
-    grid-gap: 10px;
+    grid-gap: 10px; */
     
    
     
@@ -207,9 +208,9 @@ const ContainerScroll = styled.div`
     
 `
 const Images = styled(Img)`
-    border-radius: 10px;
+    /* border-radius: 10px; */
     height: 750px;
-    min-width: 580px;
+    /* min-width: 580px; */
     
 
 `

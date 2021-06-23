@@ -105,13 +105,13 @@ const Certificates = () => {
                     <ColumTwo >   
                         <Carousel>
                             <Carousel.Item>
-                                <img css={`height: 700px; weight: 100%`} src={slide1} alt="Certificate Wester"/>
+                                <img css={`height: 450px; weight: 100%`} src={slide1} alt="Certificate Wester"/>
                             </Carousel.Item>
                             <Carousel.Item>
-                                <img css={`height: 700px; weight: 100%`} src={slide2} alt="Certificate Wester2"/>
+                                <img css={`height: 450px; weight: 100%`} src={slide2} alt="Certificate Wester2"/>
                             </Carousel.Item>
                             <Carousel.Item>
-                                 <img css={`height: 700px; weight: 100%`} src={slide3} alt="Certificate Zilmet"/>
+                                 <img css={`height: 450px; weight: 100%`} src={slide3} alt="Certificate Zilmet"/>
                             </Carousel.Item>
                         </Carousel>
 
@@ -203,9 +203,12 @@ const Certificate = styled.div`
 
 const ColumTwo = styled.div`
     display: grid;
-    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
     white-space: pre-line;
-    height: 200px;
+    
+    img {
+        height: 850px;
+    }
     /* display:flex;
     flex-direction: row;
     margin-top: 2rem;
@@ -216,7 +219,9 @@ const ColumTwo = styled.div`
 
     @media screen and (max-width: 500px) {
         grid-template-columns: 1fr;
-        height: auto;
+        img {
+         height: 450px;
+         }
     } 
 `
 const ContainerScroll = styled.div`
