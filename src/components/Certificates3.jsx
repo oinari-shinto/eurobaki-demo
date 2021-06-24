@@ -105,13 +105,13 @@ const Certificates = () => {
                     <ColumTwo >   
                         <Carousel>
                             <Carousel.Item>
-                                <img css={`height: 450px; weight: 100%`} src={slide1} alt="Certificate Wester"/>
+                                <img src={slide1} alt="Certificate Wester"/>
                             </Carousel.Item>
                             <Carousel.Item>
-                                <img css={`height: 450px; weight: 100%`} src={slide2} alt="Certificate Wester2"/>
+                                <img  src={slide2} alt="Certificate Wester2"/>
                             </Carousel.Item>
                             <Carousel.Item>
-                                 <img css={`height: 450px; weight: 100%`} src={slide3} alt="Certificate Zilmet"/>
+                                 <img src={slide3} alt="Certificate Zilmet"/>
                             </Carousel.Item>
                         </Carousel>
 

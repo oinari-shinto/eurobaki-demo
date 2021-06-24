@@ -31,7 +31,7 @@ const Certificates = () => {
     })
     }, []) */
 
-    const data = useStaticQuery(graphql`
+    /* const data = useStaticQuery(graphql`
     query  {
         allFile(filter: {ext: {regex: "/(jpg)|(png)|(jpeg)/"}, name: {in: ["cert_wester_1", "cert_wester_2" ]}}) {
           edges {
@@ -45,7 +45,31 @@ const Certificates = () => {
           }
         }
       }
-    `)
+    `) */
+    const data = graphql`
+      query {
+        slideShow: allFile(
+            filter: {ext: {regex: "/(jpg)|(png)|(jpeg)/"}, name: {in: ["cert_wester_1", "cert_wester_2"]}}
+            sort: {fields: base, order: ASC}
+          ) {
+            edges {
+              node {
+                id
+                base
+                childImageSharp {
+                    gatsbyImageData(
+                        height: 900
+                        width: 600
+                        placeholder: BLURRED
+                        quality: 70
+                        blurredOptions: {width: 100}
+                      )
+                }
+              }
+            }
+          }
+      }
+    `
     
     return (
         <CertificatesContainer>
