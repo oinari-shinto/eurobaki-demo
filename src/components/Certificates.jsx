@@ -4,11 +4,14 @@ import Img from 'gatsby-image'
 import {IoMdCheckmarkCircleOutline} from 'react-icons/io'
 import {FaRegLightbulb} from 'react-icons/fa'
 import { graphql, useStaticQuery } from 'gatsby'
+import { StaticImage, GatsbyImage } from 'gatsby-plugin-image'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import HorizontalScroll from 'react-scroll-horizontal'
 import Scrollable from './hooks/Scrollable'
 
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { Carousel } from 'react-bootstrap'
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.defaults({ease: "none", duration: 2});
@@ -31,25 +34,12 @@ const Certificates = () => {
     })
     }, []) */
 
-    /* const data = useStaticQuery(graphql`
-    query  {
-        allFile(filter: {ext: {regex: "/(jpg)|(png)|(jpeg)/"}, name: {in: ["cert_wester_1", "cert_wester_2" ]}}) {
-          edges {
-            node {
-              childImageSharp {
-                fluid {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-        }
-      }
-    `) */
-    const data = graphql`
+    
+    const data = useStaticQuery (
+        graphql`
       query {
         slideShow: allFile(
-            filter: {ext: {regex: "/(jpg)|(png)|(jpeg)/"}, name: {in: ["cert_wester_1", "cert_wester_2"]}}
+            filter: {ext: {regex: "/(jpg)|(png)|(jpeg)/"}, name: {in: ["certificate-wester-1", "certificate-wester-2", "certificate-zilmet"]}}
             sort: {fields: base, order: ASC}
           ) {
             edges {
@@ -63,13 +53,15 @@ const Certificates = () => {
                         placeholder: BLURRED
                         quality: 70
                         blurredOptions: {width: 100}
-                      )
+                        transformOptions: {cropFocus: CENTER, fit: COVER}
+                    )
                 }
               }
             }
           }
       }
     `
+    ) 
     
     return (
         <CertificatesContainer>
@@ -120,14 +112,15 @@ const Certificates = () => {
                
                 {/* <HorizontalScroll> */}
                 {/* <Scrollable _class="data"> */}
-                    <ColumTwo >   
-                    
-                            {data.allFile.edges.map((image, key) => (
-                                <div>
-                                <Images className="container" key={key} fluid={image.node.childImageSharp.fluid}  />
-                                </div>
-                            ))}
-                        
+                    <ColumTwo >                           
+                        <Carousel>
+                           {data.slideShow.edges.map(({node}) => (
+                               <Carousel.Item key={node.id}>   
+                                   <GatsbyImage image={node.childImageSharp.gatsbyImageData} alt={node.base.split('-')
+                                   .join(' ').split('.')[0]} />
+                               </Carousel.Item> 
+                           ))}
+                        </Carousel>          
                     </ColumTwo>
                {/*  </Scrollable> */}
                {/*  </HorizontalScroll> */}
@@ -209,7 +202,7 @@ const Certificate = styled.div`
 
 const ColumTwo = styled.div`
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr ;
     white-space: pre-line;
     grid-gap: 10px;
     /* display:flex;
@@ -226,7 +219,7 @@ const ColumTwo = styled.div`
 `
 const ContainerScroll = styled.div`
     max-width: 600px;
-    overflow-x: scroll;
+    /* overflow-x: scroll; */
     
     
     

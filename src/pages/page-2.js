@@ -8,9 +8,9 @@ import Component1 from "../components/Component1"
 
 import { gsap } from "gsap";
 import Certificates3 from "../components/Certificates3"
-import slide1 from '../assets/images/cert_wester_1.jpg'
-import slide2 from '../assets/images/cert_wester_2.jpg'
-import slide3 from '../assets/images/cert_zilmet.jpg'
+import slide1 from '../assets/images/certificate-wester-1.jpg'
+import slide2 from '../assets/images/certificate-wester-2.jpg'
+import slide3 from '../assets/images/certificate-zilmet.jpg'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 import { Carousel } from 'react-bootstrap'
