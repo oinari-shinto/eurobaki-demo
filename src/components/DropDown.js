@@ -10,10 +10,10 @@ import { Button } from './Button';
 
 
 
-const DropDown = () => {
+const DropDown = ({ isOpen, toggle }) => {
     return (
-        <DropdownContainer>
-            <Icon>
+        <DropdownContainer isOpen={isOpen} onClick={toggle}>
+            <Icon onClick={toggle}>
                 <CloseIcon />
             </Icon>
             <DropdownWrapper>
@@ -48,7 +48,8 @@ const DropdownContainer = styled.div`
     top: 0;
     left: 0;
     transition: 0.3s ease-in-out;
-    opacity: 1;
+    opacity: ${({isOpen}) => (isOpen ? '1' : '0')};
+    top: ${({isOpen}) => (isOpen ? '0' : '-100%')};
 `;
 
 const Icon = styled.div`
@@ -71,6 +72,10 @@ const DropdownMenu = styled.div`
     grid-template-rows: repeat(6, 80px);
     text-align: center;
     margin-bottom: 4rem;
+
+    @media screen and (max-width: 480px) {
+        grid-template-rows: repeat(6, 60px);
+    }
 `;
 const DropdownLink = styled(Link)`
     display: flex;
@@ -88,6 +93,9 @@ const DropdownLink = styled(Link)`
     }
 `;
 
-const BtnWrap = styled.div``;
+const BtnWrap = styled.div`
+    display: flex;
+    justify-content: center;
+`;
 
 export default DropDown

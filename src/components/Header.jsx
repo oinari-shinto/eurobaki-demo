@@ -5,11 +5,11 @@ import { FaBars } from 'react-icons/fa'
 import { menuData } from '../data/menuData'
 import { Button } from "./Button"
 
-const Header = () => {
+const Header = ({toggle}) => {
   return (
     <Nav>
       <NavLink to="/">30 Bar</NavLink>
-      <Bars />
+      <MenuBars onClick={toggle}/>
       <NavMenu>
         {menuData.map((item, index) => (
           <NavLink to={item.link} key={index}>
@@ -47,7 +47,7 @@ const NavLink = styled(Link)`
   cursor: pointer;
   
 `
-const Bars = styled(FaBars)`
+const MenuBars = styled(FaBars)`
   display: none;
   color: #fff;
 
