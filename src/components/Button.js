@@ -17,7 +17,8 @@ export const Button = styled(Link)`
     border-radius: ${({ round }) => (round ? '50px' : 'none')};
 
     &:hover {
-        background: ${({ primary }) => (primary ? '#077BF1' : '#F26A2E')};
+        background: ${({ primary }) => (primary ? '#FFFFE0' : '#F26A2E')};
         transform: translate(-2px);
+        color: #000000;
     }
 `

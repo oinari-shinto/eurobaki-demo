@@ -14,6 +14,7 @@ import slide3 from '../assets/images/certificate-zilmet.jpg'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 import { Carousel } from 'react-bootstrap'
+import DropDown from "../components/DropDown"
 
 const SecondPage = () =>  {
   let headerRef = useRef(null);
@@ -29,6 +30,7 @@ const SecondPage = () =>  {
     }, [])
   return (
     <Layout>
+      <DropDown />
       <SEO title="Page two" />
       <div ref={headerRef}>
       <Component1 />
