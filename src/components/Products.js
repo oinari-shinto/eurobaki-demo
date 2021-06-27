@@ -15,7 +15,7 @@ const Products = ({ heading }) => {
   useEffect(() => {
       
     gsap.from(".prodAnime", {
-      duration: 3,
+      duration: 2,
       autoAlpha: 0,
       ease: 'none',
       delay: 3,
@@ -23,7 +23,7 @@ const Products = ({ heading }) => {
         trigger: ".prodAnime",
         start: "top 90%",
         end: "bottom 10%",
-        markers: true,
+        
         toggleActions: "restart reset restart reset",
       }
     })
@@ -100,22 +100,21 @@ export default Products
 const ProductsContainer = styled.div`
     min-height: 50vh;
     padding: 5rem calc((100vw - 1300px) / 2);
-    background: transparent ;
+    background:  #fff ;
     color: #fff;
     
     
     
     
 `
-/* animation: ${animateOpacity} 5s  , ${animatePosition} 2s ; */
 const ProductsHeading = styled.div`
-    opacity: 1;
+   
     font-size: clamp(1.2rem, 5vw, 3rem);
     margin-bottom: 5rem;
     text-align: center;
     color: #000;
 `
-/* animation: ${animateOpacity} 5s  , ${animatePosition} 2s ; */
+
 const ProductsWrapper = styled.div`
   
   display: grid;
@@ -137,7 +136,7 @@ const ProductsWrapper = styled.div`
 const ProductCard = styled.div`
   line-height: 2;
   width: 100%;
-  height: 500px;
+  height: 100%;
    /* 100% if i want see image */
   position: relative;
   border-radius: 10px;

@@ -151,7 +151,7 @@ export default TableWester
 
 const TableSetting = styled.div`
     white-space: nowrap;
-    
+    background:  #fff;
 `
 
 
