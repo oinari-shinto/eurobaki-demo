@@ -1,4 +1,4 @@
-import React, { Component, useEffect } from "react";
+/* import React, { Component, useEffect } from "react";
 import "./page-3.css"
 import gsap from 'gsap'
 import {useStaticQuery, graphql} from 'gatsby'
@@ -23,7 +23,7 @@ const SimpleSlider = () => {
           }
         }
       }
-    `)
+    `) */
     /* const data = useStaticQuery(graphql`
  query ProductsQuery2  {
     allProductsJson (limit: 4) {
@@ -46,7 +46,7 @@ const SimpleSlider = () => {
     }
   }
 `) */
-  useEffect(() => {
+ /*  useEffect(() => {
 
   let iteration = 0; // gets iterated when we scroll all the way to the end or start and wraps around - allows us to smoothly continue the playhead scrubbing in the correct direction.
   
@@ -157,8 +157,8 @@ const SimpleSlider = () => {
     return seamlessLoop;
   } 
 }, [])
-
-function getProducts(data) {
+ */
+/* function getProducts(data) {
   /* const productsArray = []
     data.allProductsJson.edges.forEach((item, index) => {
         productsArray.push(
@@ -176,7 +176,7 @@ function getProducts(data) {
     return productsArray
 } */
 
-  const productsArray = []
+  /* const productsArray = []
   {data.allFile.edges.forEach((image, key) => {
     productsArray.push (
                           
@@ -232,40 +232,5 @@ function getProducts(data) {
   );
 }
 
-export default SimpleSlider;
+export default SimpleSlider; */
 
-const Images = styled(Img)`
-    border-radius: 10px;
-    height: 100%;
-    min-width: 580px;
-    
-
-`
-const ProductCard = styled.div`
-  line-height: 2;
-  width: 100%;
-  height: 500px;
-   /* 100% if i want see image */
-  position: relative;
-  border-radius: 10px;
-  transition: 0.2s ease;
-  
-  
-  
-`
-const ProductImg = styled(Img)`
-  height: 100%;
-  max-width: 100%;
-  position: relative;
-  border-radius: 10px;
-  filter: brightness(90%);
-  transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
-  
-  
-  
-  &:hover {
-    filter: brightness(100%);
-    
-  }
-  
-`
