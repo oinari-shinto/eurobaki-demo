@@ -7,8 +7,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import { StaticImage, GatsbyImage } from 'gatsby-plugin-image'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import HorizontalScroll from 'react-scroll-horizontal'
-import Scrollable from './hooks/Scrollable'
+
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Carousel } from 'react-bootstrap'

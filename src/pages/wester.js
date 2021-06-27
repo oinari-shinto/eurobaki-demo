@@ -12,6 +12,7 @@ import Certificates from "../components/Certificates"
 import Stats from "../components/Stats"
 import Email from "../components/Email"
 import TableWester from "../components/dataTables/TableWester";
+import PresentationSection from "../components/PresentationSection"
 
 
 
@@ -25,6 +26,7 @@ const wester = () => (
     <ProductsWester heading="Wester"/>
     <TableWester />
     <Certificates />
+    <PresentationSection />
     <Stats />
     <Email />
     <Link to="/">Go back to the homepage</Link>
