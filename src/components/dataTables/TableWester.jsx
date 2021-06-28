@@ -44,7 +44,7 @@ const TableWester = () => {
         <div>
             <TableSetting>
                <Container>
-                  <Table responsive striped bordered>
+                  <Table responsive  bordered>
                       <thead>
                         <tr>
                           <th>Model / Объем, л</th>
@@ -59,6 +59,9 @@ const TableWester = () => {
                         </tr>
                       </thead>
                       <tbody>
+                      <tr>
+                        <td colspan="8" ><p>Расширительные баки Wester WRV для отопления</p></td>
+                      </tr>
                       <tr>
                           <td>WRV 200</td>
                           <td><b>66270 руб.</b></td>
@@ -91,9 +94,9 @@ const TableWester = () => {
                           {/* <td>Сменная(Италия)</td> */}
                         </tr>
                         <tr>
-                          <br></br>
+                        <td colspan="8" ><p></p></td>
                         </tr>
-                        <tr vertical-align="bottom">
+                        <tr >
                           <td>WRV 750</td>
                           <td><b>66270 руб.</b></td>
                           <td>780</td>
@@ -114,6 +117,131 @@ const TableWester = () => {
                           <td>165</td>
                           <td>10</td>
                           {/* <td>Сменная(Италия)</td> */}
+                          
+                        </tr>
+                        <tr>
+                          <td>WRV 1500</td>
+                          <td><b>238000 руб.</b></td> 
+                          <td>960</td>
+                          <td>2350</td>
+                          <td>2</td>
+                          <td>244</td>
+                          <td>10</td>
+                          {/* <td>Сменная(Италия)</td> */}
+                        </tr>
+                        <tr>
+                          <td>WRV 2000</td>
+                          <td><b>355780 руб.</b></td> 
+                          <td>1100</td>
+                          <td>2450</td>
+                          <td>2</td>
+                          <td>375</td>
+                          <td>10</td>
+                          {/* <td>Сменная(Италия)</td> */}
+                        </tr>
+                        <tr>
+                          <td>WRV 2500</td>
+                          <td><b>395174 руб.</b></td> 
+                          <td>1200</td>
+                          <td>2800</td>
+                          <td>2</td>
+                          <td>307</td>
+                          <td>10</td>
+                          {/* <td>Сменная(Италия)</td> */}
+                        </tr>
+                        <tr>
+                          <td>WRV 3000</td>
+                          <td><b>425650 руб.</b></td> 
+                          <td>1250</td>
+                          <td>2700</td>
+                          <td>2 1/2</td>
+                          <td>550</td>
+                          <td>10</td>
+                          {/* <td>Сменная(Италия)</td> */}
+                        </tr>
+                        <tr>
+                          <td>WRV 5000</td>
+                          <td><b>685100 руб.</b></td> 
+                          <td>1500</td>
+                          <td>3100</td>
+                          <td>3</td>
+                          <td>655</td>
+                          <td>10</td>
+                         {/*  <td>Сменная(Италия)</td> */}
+                        </tr>
+                        <tr>
+                          <td>WRV 10 000</td>
+                          <td><b>1750500 руб.</b></td> 
+                          <td>1600</td>
+                          <td>5750</td>
+                          <td>4</td>
+                          <td>1920</td>
+                          <td>10</td>
+                         {/*  <td>Сменная(Италия)</td> */}
+                          
+                        </tr>
+                        <tr></tr>
+                        
+                        <br></br>
+                        <tr>
+                        <td colspan="8" ><p>Расширительные баки Wester WAV для водоснабжения</p></td>
+                        </tr>
+                      <tr>
+                          <td>WAV 200</td>
+                          <td><b>66270 руб.</b></td>
+                          <td>780</td>
+                          <td>1720</td>
+                          <td>2</td>
+                          <td>145</td>
+                          <td>10</td>
+                          {/* <td>Сменная(Италия)</td> */}
+                          <td rowSpan="3" ><img src={ImageTab1} width="250px" /></td>
+                        </tr>
+                        <tr>
+                          <td>WRV 300</td>
+                          <td><b>66270 руб.</b></td>
+                          <td>780</td>
+                          <td>1720</td>
+                          <td>2</td>
+                          <td>145</td>
+                          <td>10</td>
+                         {/*  <td>Сменная(Италия)</td> */}
+                        </tr>
+                        <tr>
+                          <td>WRV 500</td>
+                          <td><b>66270 руб.</b></td>
+                          <td>780</td>
+                          <td>1720</td>
+                          <td>2</td>
+                          <td>145</td>
+                          <td>10</td>
+                          {/* <td>Сменная(Италия)</td> */}
+                        </tr>
+                        <tr>
+                        <td colspan="8" ><p></p></td>
+                        </tr>
+                        <tr >
+                          <td>WRV 750</td>
+                          <td><b>66270 руб.</b></td>
+                          <td>780</td>
+                          <td>1720</td>
+                          <td>2</td>
+                          <td>145</td>
+                          <td>10</td>
+                          {/* <td>Сменная(Италия)</td> */}
+                          <td rowSpan="8"   ><img   src={ImageTab2} width="250px"     /><p>Мембрана: Сменная (Италия)<br/>Завод: Москва</p></td>
+                          
+                        </tr>
+                        <tr>
+                          <td>WRV 1000</td>
+                          <td><b>89350 руб.</b></td>
+                          <td>780</td>
+                          <td>2200</td>
+                          <td>2</td>
+                          <td>165</td>
+                          <td>10</td>
+                          {/* <td>Сменная(Италия)</td> */}
+                          
                         </tr>
                         <tr>
                           <td>WRV 1500</td>
