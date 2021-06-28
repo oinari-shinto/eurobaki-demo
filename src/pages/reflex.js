@@ -1,14 +1,39 @@
-import React from 'react'
-import Layout from '../layouts/mainLayout'
+import * as React from "react"
+import { Link } from "gatsby"
 
-const Reflex = () => {
-    return (
-        <Layout>
-            <h1>Reflex</h1>
-            <p>Расширительные баки для отопления и водоснаюжения Reflex</p>
-            <p>Производство Германия</p>
-        </Layout>
-    )
-}
 
-export default Reflex
+import Layout from "../layouts/mainLayout"
+import SEO from "../components/seo"
+
+
+import { Hero } from "../components/Hero"
+import ProductsWester from "../components/ProductsWester"
+
+import Stats from "../components/Stats"
+import Email from "../components/Email"
+import TableReflex from "../components/dataTables/TableReflex";
+import PresentationSection from "../components/PresentationSection"
+import CertificatesReflex from "../components/CertificatesReflex"
+
+
+
+
+
+
+const reflex = () => (
+  <Layout>
+    <SEO title="Reflex" />
+    <Hero HeaderMark="Продажа и изготовление расширительных баков Reflex"/>
+    <ProductsWester heading="Reflex"/>
+    <TableReflex />
+    <CertificatesReflex />
+    {/* <PresentationSection /> */}
+    <Stats />
+    <Email />
+    <Link to="/">Go back to the homepage</Link>
+    
+  </Layout>
+)
+
+export default reflex
+

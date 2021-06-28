@@ -4,7 +4,7 @@ import Link from 'gatsby-link'
 import styled from 'styled-components'
 
 import {useStaticQuery, graphql} from 'gatsby'
-import Img from 'gatsby-image'
+
 import ImageTab2 from '../../assets/images/wrv2-1000.jpg'
 import ImageTab1 from '../../assets/images/wrv-top.jpg'
 
