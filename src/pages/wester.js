@@ -26,7 +26,7 @@ const wester = () => (
     <ProductsWester heading="Wester"/>
     <TableWester />
     <Certificates />
-    <PresentationSection />
+    {/* <PresentationSection /> */}
     <Stats />
     <Email />
     <Link to="/">Go back to the homepage</Link>

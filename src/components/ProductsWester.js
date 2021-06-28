@@ -13,7 +13,7 @@ import Link from 'gatsby-link'
 const ProductsWester = ({ heading }) => {
 const data = useStaticQuery(graphql`
  query ProductsQueryWester {
-    allProductsJson (filter: {mark: {eq: "Wester"}}) {
+    allProductsJson (limit: 4, filter: {mark: {eq: "Wester"}}) {
       edges {
         node {
           alt
@@ -93,7 +93,7 @@ export default ProductsWester
 
 
 const ProductsContainer = styled.div`
-    min-height: 80vh;
+    min-height: 50vh;
     padding: 5rem calc((100vw - 1300px) / 2);
     background: transparent ;
     color: #fff;
