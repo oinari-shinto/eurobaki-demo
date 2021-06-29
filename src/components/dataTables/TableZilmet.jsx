@@ -5,39 +5,13 @@ import styled from 'styled-components'
 
 import {useStaticQuery, graphql} from 'gatsby'
 
-import ImageTab2 from '../../assets/images/wrv2-1000.jpg'
+import ImageTab2 from '../../assets/images/zilmet-1000.jpg'
 import ImageTab1 from '../../assets/images/wrv-top.jpg'
 
 
-const TableWester = () => {
+const TableZilemet = () => {
 
-      /* const data = useStaticQuery(graphql`
-      query ProductsQuery  {
-        allProductsJson (filter: {name: {in: "manyTank"}}) {
-          edges {
-            node {
-              alt
-              button
-              name
-              link
-              img1 {
-                childImageSharp {
-                  fluid {
-                    ...GatsbyImageSharpFluid
-                  }
-              img2 {
-                childImageSharp {
-                  fluid {
-                    ...GatsbyImageSharpFluid
-                  }
-                }
-              }
-            }
-          }
-          
-        }
-      }
-    `) */
+  
 
 
     return (
@@ -60,7 +34,7 @@ const TableWester = () => {
                       </thead>
                       <tbody>
                       <tr>
-                        <td colspan="8" ><p>Расширительные баки Wester WRV для отопления</p></td>
+                        <td colspan="8" ><p>Расширительные баки Zilmet Ultra</p></td>
                       </tr>
                       <tr>
                           <td>WRV 200</td>
@@ -313,7 +287,7 @@ const TableWester = () => {
     )
 }
 
-export default TableWester
+export default TableZilemet
 
 
 const TableSetting = styled.div`
@@ -321,8 +295,3 @@ const TableSetting = styled.div`
     
     text-align: center;
 `
-
-
-
-
-
