@@ -5,8 +5,9 @@ import styled from 'styled-components'
 
 import {useStaticQuery, graphql} from 'gatsby'
 
-import ImageTab2 from '../../assets/images/wrv2-1000.jpg'
-import ImageTab1 from '../../assets/images/wrv-top.jpg'
+import ImageTab1 from '../../assets/images/reflex-n-small.jpg'
+import ImageTab2 from '../../assets/images/reflex-g-small.jpg'
+import ImageTab3 from '../../assets/images/reflex-g.jpg'
 
 
 const TableReflex = () => {
@@ -65,73 +66,73 @@ const TableReflex = () => {
 
                         <tr>
                           <td>Reflex N200</td>
-                          <td><b>66270 руб.</b></td>
-                          <td>780</td>
-                          <td>1720</td>
-                          <td>2</td>
-                          <td>145</td>
+                          <td><b>14,720 руб.</b></td>
+                          <td>634</td>
+                          <td>760</td>
+                          <td>1</td>
+                          <td>36.7</td>
                           <td>6</td>
                           {/* <td>Сменная(Италия)</td> */}
                           <td rowspan="8" ><br></br><img src={ImageTab1} width="250px" /></td>
                         </tr>
                         <tr>
                           <td>Reflex N250</td>
-                          <td><b>66270 руб.</b></td>
-                          <td>780</td>
-                          <td>1720</td>
-                          <td>2</td>
-                          <td>145</td>
+                          <td><b>21,390 руб.</b></td>
+                          <td>634</td>
+                          <td>890</td>
+                          <td>1</td>
+                          <td>45</td>
                           <td>6</td>
                           {/* <td>Сменная(Италия)</td> */}
                         </tr>
                         <tr>
                           <td>Reflex N300</td>
-                          <td><b>66270 руб.</b></td>
-                          <td>780</td>
-                          <td>1720</td>
-                          <td>2</td>
-                          <td>145</td>
+                          <td><b>25,185 руб.</b></td>
+                          <td>634</td>
+                          <td>1060</td>
+                          <td>1</td>
+                          <td>52</td>
                           <td>6</td>
                           {/* <td>Сменная(Италия)</td> */}
                         </tr>
                         <tr>
                           <td>Reflex N400</td>
-                          <td><b>66270 руб.</b></td>
-                          <td>780</td>
-                          <td>1720</td>
-                          <td>2</td>
-                          <td>145</td>
+                          <td><b>28,405 руб.</b></td>
+                          <td>740</td>
+                          <td>1070</td>
+                          <td>1</td>
+                          <td>65</td>
                           <td>6</td>
                          {/*  <td>Сменная(Италия)</td> */}
                         </tr>
                         <tr>
                           <td>Reflex N500</td>
-                          <td><b>66270 руб.</b></td>
-                          <td>780</td>
-                          <td>1720</td>
-                          <td>2</td>
-                          <td>145</td>
+                          <td><b>33,695 руб.</b></td>
+                          <td>740</td>
+                          <td>1290</td>
+                          <td>1</td>
+                          <td>79</td>
                           <td>6</td>
                           {/* <td>Сменная(Италия)</td> */}
                         </tr>
                         <tr>
                           <td>Reflex N600</td>
-                          <td><b>66270 руб.</b></td>
-                          <td>780</td>
-                          <td>1720</td>
-                          <td>2</td>
-                          <td>145</td>
+                          <td><b>49,220 руб.</b></td>
+                          <td>740</td>
+                          <td>1530</td>
+                          <td>1</td>
+                          <td>85</td>
                           <td>6</td>
                           {/* <td>Сменная(Италия)</td> */}
                         </tr>
                         
                         <tr >
                           <td>Reflex N800</td>
-                          <td><b>66270 руб.</b></td>
-                          <td>780</td>
-                          <td>1720</td>
-                          <td>2</td>
-                          <td>145</td>
+                          <td><b>58,420 руб.</b></td>
+                          <td>740</td>
+                          <td>1995</td>
+                          <td>1</td>
+                          <td>103</td>
                           <td>6</td>
                           {/* <td>Сменная(Италия)</td> */}
                          
@@ -139,11 +140,11 @@ const TableReflex = () => {
                         </tr>
                         <tr>
                           <td>Reflex N1000</td>
-                          <td><b>89350 руб.</b></td>
-                          <td>780</td>
-                          <td>2200</td>
-                          <td>2</td>
-                          <td>165</td>
+                          <td><b>76,935 руб.</b></td>
+                          <td>740</td>
+                          <td>2410</td>
+                          <td>1</td>
+                          <td>120</td>
                           <td>6</td>
                           {/* <td>Сменная(Италия)</td> */}
                         </tr>
@@ -154,125 +155,116 @@ const TableReflex = () => {
                         </tr>
                         <tr>
                           <td>Reflex G200</td>
-                          <td><b>66270 руб.</b></td>
-                          <td>780</td>
-                          <td>1720</td>
-                          <td>2</td>
-                          <td>145</td>
+                          <td><b>77,395 руб.</b></td>
+                          <td>634</td>
+                          <td>972</td>
+                          <td>1 1/4</td>
+                          <td>33.4</td>
                           <td>10</td>
                           {/* <td>Сменная(Италия)</td> */}
-                          <td rowSpan="6" ><img src={ImageTab1} width="250px" /></td>
-                        </tr>
-                        <tr>
-                          <td>Reflex G250</td>
-                          <td><b>66270 руб.</b></td>
-                          <td>780</td>
-                          <td>1720</td>
-                          <td>2</td>
-                          <td>145</td>
-                          <td>10</td>
-                          {/* <td>Сменная(Италия)</td> */}
+                          <td rowSpan="6" ><img src={ImageTab2} width="250px" /></td>
                         </tr>
                         <tr>
                           <td>Reflex G300</td>
-                          <td><b>66270 руб.</b></td>
-                          <td>780</td>
-                          <td>1720</td>
-                          <td>2</td>
-                          <td>145</td>
+                          <td><b>102,810 руб.</b></td>
+                          <td>634</td>
+                          <td>1273</td>
+                          <td>1 1/4</td>
+                          <td>34.6</td>
                           <td>10</td>
                           {/* <td>Сменная(Италия)</td> */}
                         </tr>
                         <tr>
                           <td>Reflex G400</td>
-                          <td><b>66270 руб.</b></td>
-                          <td>780</td>
-                          <td>1720</td>
-                          <td>2</td>
-                          <td>145</td>
+                          <td><b>147,200 руб.</b></td>
+                          <td>740</td>
+                          <td>1245</td>
+                          <td>1 1/4</td>
+                          <td>51</td>
                           <td>10</td>
                          {/*  <td>Сменная(Италия)</td> */}
                         </tr>
                         <tr>
                           <td>Reflex G500</td>
-                          <td><b>66270 руб.</b></td>
-                          <td>780</td>
-                          <td>1720</td>
-                          <td>2</td>
-                          <td>145</td>
+                          <td><b>169,855 руб.</b></td>
+                          <td>740</td>
+                          <td>1475</td>
+                          <td>1 1/4</td>
+                          <td>57.1</td>
                           <td>10</td>
                           {/* <td>Сменная(Италия)</td> */}
                         </tr>
                         <tr>
                           <td>Reflex G600</td>
-                          <td><b>66270 руб.</b></td>
-                          <td>780</td>
-                          <td>1720</td>
-                          <td>2</td>
-                          <td>145</td>
+                          <td><b>209,880 руб.</b></td>
+                          <td>740</td>
+                          <td>1859</td>
+                          <td>1 1/2</td>
+                          <td>118</td>
                           <td>10</td>
                           {/* <td>Сменная(Италия)</td> */}
                         </tr>
 
                         <tr >
                           <td>Reflex G800</td>
-                          <td><b>66270 руб.</b></td>
-                          <td>780</td>
-                          <td>1720</td>
-                          <td>2</td>
-                          <td>145</td>
+                          <td><b>238,590 руб.</b></td>
+                          <td>740</td>
+                          <td>2324</td>
+                          <td>1 1/2</td>
+                          <td>166</td>
                           <td>10</td>
                           {/* <td>Сменная(Италия)</td> */}
-                          <td rowSpan="8"> <br></br><img src={ImageTab2} width="250px"/><p></p></td>
+                          
                           
                         </tr>
                         <tr>
                           <td>Reflex G1000</td>
-                          <td><b>89350 руб.</b></td>
-                          <td>780</td>
-                          <td>2200</td>
-                          <td>2</td>
-                          <td>165</td>
+                          <td><b>272,690 руб.</b></td>
+                          <td>740</td>
+                          <td>2604</td>
+                          <td>1 1/2</td>
+                          <td>174</td>
                           <td>10</td>
+                          <td rowSpan="5"> <br></br><img src={ImageTab3} width="250px"/><p></p></td>
                           {/* <td>Сменная(Италия)</td> */}
                         </tr>
                         <tr>
                           <td>Reflex G2000</td>
-                          <td><b>238000 руб.</b></td> 
-                          <td>960</td>
-                          <td>2350</td>
+                          <td><b>615,450 руб.</b></td> 
+                          <td>1200</td>
+                          <td>2451</td>
                           <td>2</td>
-                          <td>244</td>
+                          <td>485</td>
                           <td>10</td>
                           {/* <td>Сменная(Италия)</td> */}
                         </tr>
                         <tr>
                           <td>Reflex G3000</td>
-                          <td><b>355780 руб.</b></td> 
-                          <td>1100</td>
-                          <td>2450</td>
+                          <td><b>909,700 руб.</b></td> 
+                          <td>1500</td>
+                          <td>2532</td>
                           <td>2</td>
-                          <td>375</td>
+                          <td>830</td>
                           <td>10</td>
                           {/* <td>Сменная(Италия)</td> */}
                         </tr>
                         <tr>
                           <td>Reflex G4000</td>
-                          <td><b>395174 руб.</b></td> 
-                          <td>1200</td>
-                          <td>2800</td>
+                          <td><b>981,200 руб.</b></td> 
+                          <td>1500</td>
+                          <td>3107</td>
                           <td>2</td>
-                          <td>307</td>
+                          <td>1064</td>
                           <td>10</td>
                           {/* <td>Сменная(Италия)</td> */}
                         </tr>
                         <tr>
                           <td>Reflex G5000</td>
-                          <td><b>425650 руб.</b></td> 
-                          <td>1250</td>
-                          <td>2700</td>
+                          <td><b>1,052,700 руб.</b></td> 
+                          <td>1500</td>
+                          <td>3642</td>
                           <td>2 1/2</td>
-                          <td>550</td>
+                          <td>1274</td>
                           <td>10</td>
                           {/* <td>Сменная(Италия)</td> */}
                         </tr>
