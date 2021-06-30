@@ -1,8 +1,8 @@
 [
     {
         "img": "../assets/images/reflex-N-1000.jpg",
-        "alt": "Reflex N 1000",
-        "name": "Reflex N 1000",
+        "alt": "Reflex",
+        "name": "Reflex",
         "button": "Купить",
         "link": "/reflex",
         "mark": "Reflex",
@@ -10,8 +10,8 @@
     },
     {
         "img": "../assets/images/flamco-1000.png",
-        "alt": "Flamco R 1000",
-        "name": "Flamco R 1000",
+        "alt": "Flamco",
+        "name": "Flamco",
         "button": "Купить",
         "link": "/flamco",
         "page": "main",
@@ -19,8 +19,8 @@
     },
     {
         "img": "../assets/images/zilmet-1000.jpg",
-        "alt": "Zilmet Ultra Pro 1000",
-        "name": "Zilmet Ultra Pro 1000",
+        "alt": "Zilmet Ultra Pro",
+        "name": "Zilmet Ultra Pro",
         "button": "Купить",
         "link": "/zilmet",
         "page": "main",
@@ -28,12 +28,12 @@
     },
     {
         "img": "../assets/images/wrv2-1000.jpg",
-        "alt": "Wester WRV 750",
-        "name": "Wester WRV 750",
+        "alt": "Wester",
+        "name": "Wester",
         "button": "Купить",
         "link": "/wester",
         "page": "main",
-        "mark": "Wester"
+        "mark": "Wester-main"
         
     },
     {

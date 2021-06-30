@@ -5,8 +5,11 @@ import styled from 'styled-components'
 
 import {useStaticQuery, graphql} from 'gatsby'
 
-import ImageTab2 from '../../assets/images/wrv2-1000.jpg'
 import ImageTab1 from '../../assets/images/wrv-top.jpg'
+import ImageTab2 from '../../assets/images/wrv2-1000.jpg'
+import ImageTab3 from '../../assets/images/wav-top.png'
+import ImageTab4 from '../../assets/images/wav-1000.png'
+
 
 
 const TableWester = () => {
@@ -188,18 +191,18 @@ const TableWester = () => {
                         </tr>
                       <tr>
                           <td>WAV 200</td>
-                          <td><b>66270 руб.</b></td>
+                          <td><b>19,680 руб.</b></td>
                           <td>780</td>
                           <td>1720</td>
                           <td>2</td>
                           <td>145</td>
                           <td>10</td>
                           {/* <td>Сменная(Италия)</td> */}
-                          <td rowSpan="3" ><img src={ImageTab1} width="250px" /></td>
+                          <td rowSpan="3" ><img src={ImageTab3} width="250px" /></td>
                         </tr>
                         <tr>
-                          <td>WRV 300</td>
-                          <td><b>66270 руб.</b></td>
+                          <td>WAV 300</td>
+                          <td><b>21,300 руб.</b></td>
                           <td>780</td>
                           <td>1720</td>
                           <td>2</td>
@@ -208,8 +211,8 @@ const TableWester = () => {
                          {/*  <td>Сменная(Италия)</td> */}
                         </tr>
                         <tr>
-                          <td>WRV 500</td>
-                          <td><b>66270 руб.</b></td>
+                          <td>WAV 500</td>
+                          <td><b>35,200 руб.</b></td>
                           <td>780</td>
                           <td>1720</td>
                           <td>2</td>
@@ -221,20 +224,20 @@ const TableWester = () => {
                         <td colspan="8" ><p></p></td>
                         </tr>
                         <tr >
-                          <td>WRV 750</td>
-                          <td><b>66270 руб.</b></td>
+                          <td>WAV 750</td>
+                          <td><b>80,700 руб.</b></td>
                           <td>780</td>
                           <td>1720</td>
                           <td>2</td>
                           <td>145</td>
                           <td>10</td>
                           {/* <td>Сменная(Италия)</td> */}
-                          <td rowSpan="8"   ><img   src={ImageTab2} width="250px"     /><p>Мембрана: Сменная (Италия)<br/>Завод: Москва</p></td>
+                          <td rowSpan="9"   ><img   src={ImageTab4} width="250px"     /><p>Мембрана: Сменная (Италия)<br/>Завод: Москва</p></td>
                           
                         </tr>
                         <tr>
-                          <td>WRV 1000</td>
-                          <td><b>89350 руб.</b></td>
+                          <td>WAV 1000</td>
+                          <td><b>129,600 руб.</b></td>
                           <td>780</td>
                           <td>2200</td>
                           <td>2</td>
@@ -244,8 +247,8 @@ const TableWester = () => {
                           
                         </tr>
                         <tr>
-                          <td>WRV 1500</td>
-                          <td><b>238000 руб.</b></td> 
+                          <td>WAV 1500</td>
+                          <td><b>257,700 руб.</b></td> 
                           <td>960</td>
                           <td>2350</td>
                           <td>2</td>
@@ -254,8 +257,8 @@ const TableWester = () => {
                           {/* <td>Сменная(Италия)</td> */}
                         </tr>
                         <tr>
-                          <td>WRV 2000</td>
-                          <td><b>355780 руб.</b></td> 
+                          <td>WAV 2000</td>
+                          <td><b>350,100 руб.</b></td> 
                           <td>1100</td>
                           <td>2450</td>
                           <td>2</td>
@@ -264,18 +267,18 @@ const TableWester = () => {
                           {/* <td>Сменная(Италия)</td> */}
                         </tr>
                         <tr>
-                          <td>WRV 2500</td>
-                          <td><b>395174 руб.</b></td> 
+                          <td>WAV 2500</td>
+                          <td><b>434,100 руб.</b></td> 
                           <td>1200</td>
                           <td>2800</td>
                           <td>2</td>
-                          <td>307</td>
+                          <td>447</td>
                           <td>10</td>
                           {/* <td>Сменная(Италия)</td> */}
                         </tr>
                         <tr>
-                          <td>WRV 3000</td>
-                          <td><b>425650 руб.</b></td> 
+                          <td>WAV 3000</td>
+                          <td><b>459,700 руб.</b></td> 
                           <td>1250</td>
                           <td>2700</td>
                           <td>2 1/2</td>
@@ -284,18 +287,28 @@ const TableWester = () => {
                           {/* <td>Сменная(Италия)</td> */}
                         </tr>
                         <tr>
-                          <td>WRV 5000</td>
-                          <td><b>685100 руб.</b></td> 
-                          <td>1500</td>
+                          <td>WAV 4000</td>
+                          <td><b>823,300 руб.</b></td> 
+                          <td>1450</td>
                           <td>3100</td>
-                          <td>3</td>
+                          <td>2 1/2</td>
                           <td>655</td>
+                          <td>10</td>
+                          {/* <td>Сменная(Италия)</td> */}
+                        </tr>
+                        <tr>
+                          <td>WAV 5000</td>
+                          <td><b>1,152,600 руб.</b></td> 
+                          <td>1450</td>
+                          <td>3720</td>
+                          <td>3</td>
+                          <td>835</td>
                           <td>10</td>
                          {/*  <td>Сменная(Италия)</td> */}
                         </tr>
                         <tr>
-                          <td>WRV 10 000</td>
-                          <td><b>1750500 руб.</b></td> 
+                          <td>WAV 10 000</td>
+                          <td><b>1,850,500 руб.</b></td> 
                           <td>1600</td>
                           <td>5750</td>
                           <td>4</td>
