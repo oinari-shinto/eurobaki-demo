@@ -82,7 +82,7 @@ export default ProductsZilmet
 
 
 const ProductsContainer = styled.div`
-    min-height: 80vh;
+    min-height: 50vh;
     padding: 5rem calc((100vw - 1300px) / 2);
     background: transparent ;
     color: #fff;
