@@ -6,8 +6,10 @@ import styled from 'styled-components'
 import {useStaticQuery, graphql} from 'gatsby'
 
 import ImageTab1 from '../../assets/images/reflex-n-small.jpg'
-import ImageTab2 from '../../assets/images/reflex-g-small.jpg'
-import ImageTab3 from '../../assets/images/reflex-g.jpg'
+import ImageTab2 from '../../assets/images/reflex-g-small.png'
+import ImageTab3 from '../../assets/images/reflex-g.png'
+import ImageTab4 from '../../assets/images/reflex_de_500.jpg'
+import ImageTab5 from '../../assets/images/reflex_de_1000.jpg'
 
 
 const TableReflex = () => {
@@ -268,7 +270,126 @@ const TableReflex = () => {
                           <td>10</td>
                           {/* <td>Сменная(Италия)</td> */}
                         </tr>
+                        <br></br>
                         
+                        <tr>
+                        <td colspan="8" ><p>Расширительные баки Reflex DE (сменная мембрана)</p></td>
+                        </tr>
+                        <tr>
+                          <td>Reflex DE200</td>
+                          <td><b>23,230 руб.</b></td>
+                          <td>634</td>
+                          <td>967</td>
+                          <td>1 1/4</td>
+                          <td>36.5</td>
+                          <td>10</td>
+                          {/* <td>Сменная(Италия)</td> */}
+                          <td rowSpan="6" ><img src={ImageTab4} width="250px" /></td>
+                        </tr>
+                        <tr>
+                          <td>Reflex DE300</td>
+                          <td><b>26,105 руб.</b></td>
+                          <td>634</td>
+                          <td>1267</td>
+                          <td>1 1/4</td>
+                          <td>41.5</td>
+                          <td>10</td>
+                          {/* <td>Сменная(Италия)</td> */}
+                        </tr>
+                        <tr>
+                          <td>Reflex DE400</td>
+                          <td><b>33,925 руб.</b></td>
+                          <td>740</td>
+                          <td>1245</td>
+                          <td>1 1/4</td>
+                          <td>73</td>
+                          <td>10</td>
+                         {/*  <td>Сменная(Италия)</td> */}
+                        </tr>
+                        <tr>
+                          <td>Reflex DE500</td>
+                          <td><b>40,825 руб.</b></td>
+                          <td>740</td>
+                          <td>1475</td>
+                          <td>1 1/4</td>
+                          <td>103</td>
+                          <td>10</td>
+                          {/* <td>Сменная(Италия)</td> */}
+                        </tr>
+                        <tr>
+                          <td>Reflex G600</td>
+                          <td><b>89,320 руб.</b></td>
+                          <td>740</td>
+                          <td>1859</td>
+                          <td>1 1/2</td>
+                          <td>128</td>
+                          <td>10</td>
+                          {/* <td>Сменная(Италия)</td> */}
+                        </tr>
+
+                        <tr >
+                          <td>Reflex DE800</td>
+                          <td><b>116,050 руб.</b></td>
+                          <td>740</td>
+                          <td>2324</td>
+                          <td>1 1/2</td>
+                          <td>176</td>
+                          <td>10</td>
+                          {/* <td>Сменная(Италия)</td> */}
+                          
+                          
+                        </tr>
+                        <tr>
+                          <td>Reflex DE1000</td>
+                          <td><b>128,590 руб.</b></td>
+                          <td>740</td>
+                          <td>2604</td>
+                          <td>1 1/2</td>
+                          <td>214</td>
+                          <td>10</td>
+                          <td rowSpan="5"> <br></br><img src={ImageTab5} width="250px"/><p></p></td>
+                          {/* <td>Сменная(Италия)</td> */}
+                        </tr>
+                        <tr>
+                          <td>Reflex DE2000</td>
+                          <td><b>534,380 руб.</b></td> 
+                          <td>1200</td>
+                          <td>2451</td>
+                          <td>2</td>
+                          <td>717</td>
+                          <td>10</td>
+                          {/* <td>Сменная(Италия)</td> */}
+                        </tr>
+                        <tr>
+                          <td>Reflex DE3000</td>
+                          <td><b>846,890 руб.</b></td> 
+                          <td>1500</td>
+                          <td>2532</td>
+                          <td>2</td>
+                          <td>962</td>
+                          <td>10</td>
+                          {/* <td>Сменная(Италия)</td> */}
+                        </tr>
+                        <tr>
+                          <td>Reflex DE4000</td>
+                          <td><b>952,600 руб.</b></td> 
+                          <td>1500</td>
+                          <td>3107</td>
+                          <td>2</td>
+                          <td>1085</td>
+                          <td>10</td>
+                          {/* <td>Сменная(Италия)</td> */}
+                        </tr>
+                        <tr>
+                          <td>Reflex G5000</td>
+                          <td><b>1,177,000 руб.</b></td> 
+                          <td>1500</td>
+                          <td>3642</td>
+                          <td>2 1/2</td>
+                          <td>1050</td>
+                          <td>10</td>
+                          {/* <td>Сменная(Италия)</td> */}
+                        </tr>
                         
                       </tbody>
                   </Table>
