@@ -1,4 +1,4 @@
-import * as React from "react"
+import React from "react"
 import { Link } from "gatsby"
 
 
@@ -8,10 +8,10 @@ import SEO from "../components/seo"
 
 import { Hero } from "../components/Hero"
 import ProductsWester from "../components/ProductsWester"
-import Certificates from "../components/CertificatesWester"
+import Certificates from "../components/CertificatesFlamco"
 import Stats from "../components/Stats"
 import Email from "../components/Email"
-import TableWester from "../components/dataTables/TableWester";
+import TableFlamco from "../components/dataTables/TableFlamco";
 import PresentationSection from "../components/PresentationSection"
 
 
@@ -19,12 +19,12 @@ import PresentationSection from "../components/PresentationSection"
 
 
 
-const wester = () => (
+const Flamco = () => (
   <Layout>
-    <SEO title="Wester" />
-    <Hero HeaderMark="Продажа и изготовление расширительных баков Wester"/>
-    <ProductsWester heading="Wester"/>
-    <TableWester />
+    <SEO title="Flamco" />
+    <Hero HeaderMark="Продажа и изготовление расширительных баков Flamco"/>
+    <ProductsWester heading="Flamco"/>
+    <TableFlamco />
     <Certificates />
     {/* <PresentationSection /> */}
     <Stats />
@@ -38,5 +38,4 @@ const wester = () => (
   </Layout>
 )
 
-export default wester
-
+export default Flamco

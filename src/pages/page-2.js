@@ -8,9 +8,9 @@ import Component1 from "../components/Component1"
 
 import { gsap } from "gsap";
 import Certificates3 from "../components/Certificates3"
-import slide1 from '../assets/images/certificate-wester-1.jpg'
-import slide2 from '../assets/images/certificate-wester-2.jpg'
-import slide3 from '../assets/images/certificate-zilmet.jpg'
+import slide1 from '../assets/images/certificates/certificate-wester-1.jpg'
+import slide2 from '../assets/images/certificates/certificate-wester-2.jpg'
+
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 import { Carousel } from 'react-bootstrap'
@@ -45,9 +45,7 @@ const SecondPage = () =>  {
                             <Carousel.Item>
                                 <img css={`height: 450px; weight: 100%`} src={slide2} alt="Certificate Wester2"/>
                             </Carousel.Item>
-                            <Carousel.Item>
-                                 <img css={`height: 450px; weight: 100%`} src={slide3} alt="Certificate Zilmet"/>
-                            </Carousel.Item>
+                            
                         </Carousel>
       </div>
       

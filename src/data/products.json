@@ -13,7 +13,7 @@
         "alt": "Flamco",
         "name": "Flamco",
         "button": "Купить",
-        "link": "/flamco",
+        "link": "/Flamco",
         "page": "main",
         "mark": "Flamco"
     },
@@ -22,7 +22,7 @@
         "alt": "Zilmet Ultra Pro",
         "name": "Zilmet Ultra Pro",
         "button": "Купить",
-        "link": "/zilmet",
+        "link": "/Zilmet",
         "page": "main",
         "mark": "Zilmet"
     },

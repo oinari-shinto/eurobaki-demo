@@ -12,9 +12,9 @@ import Scrollable from './hooks/Scrollable'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 import { Carousel } from 'react-bootstrap'
-import slide1 from '../assets/images/certificate-wester-1.jpg'
-import slide2 from '../assets/images/certificate-wester-2.jpg'
-import slide3 from '../assets/images/certificate-zilmet.jpg'
+import slide1 from '../assets/images/certificates/certificate-wester-1.jpg'
+import slide2 from '../assets/images/certificates/certificate-wester-2.jpg'
+
 import { height } from 'dom-helpers'
 
 gsap.registerPlugin(ScrollTrigger);
@@ -40,7 +40,7 @@ const Certificates = () => {
 
     const data = useStaticQuery(graphql`
     query  {
-        allFile(filter: {ext: {regex: "/(jpg)|(png)|(jpeg)/"}, name: {in: ["certificate-wester-1", "certificate-wester-2", "certificate-zilmet"]}}) {
+        allFile(filter: {ext: {regex: "/(jpg)|(png)|(jpeg)/"}, name: {in: ["certificate-wester-1", "certificate-wester-2"]}}) {
           edges {
             node {
               childImageSharp {
@@ -111,9 +111,7 @@ const Certificates = () => {
                             <Carousel.Item>
                                 <img  src={slide2} alt="Certificate Wester2"/>
                             </Carousel.Item>
-                            <Carousel.Item>
-                                 <img src={slide3} alt="Certificate Zilmet"/>
-                            </Carousel.Item>
+                            
                         </Carousel>
 
 

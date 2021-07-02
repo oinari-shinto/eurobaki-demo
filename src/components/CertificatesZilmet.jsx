@@ -38,7 +38,7 @@ const CertificatesZilmet = () => {
         graphql`
       query {
         slideShow: allFile(
-            filter: {ext: {regex: "/(jpg)|(png)|(jpeg)/"}, name: {in: ["certificate-wester-1", "certificate-wester-2", "certificate-zilmet"]}}
+            filter: {ext: {regex: "/(jpg)|(png)|(jpeg)/"}, name: {in: ["certificate-zilmet-1", "certificate-zilmet-2", "certificate-zilmet-3", "certificate-zilmet-4", "certificate-zilmet-5"]}}
             sort: {fields: base, order: ASC}
           ) {
             edges {
