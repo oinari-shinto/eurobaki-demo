@@ -45,7 +45,7 @@ const TableZilemet = () => {
                           <td>38,10</td>
                           <td>6</td>
                           {/* <td>Сменная(Италия)</td> */}
-                          <td rowSpan="3" ><img src={ImageTab1} width="250px" /></td>
+                          <td rowSpan="3" ><img src={ImageTab1} width="200px" /></td>
                         </tr>
                         <tr>
                           <td>Flexcon R 300/1,5</td>
@@ -79,7 +79,7 @@ const TableZilemet = () => {
                           <td>86,70</td>
                           <td>6</td>
                           {/* <td>Сменная(Италия)</td> */}
-                          <td rowSpan="4"   ><br/><img   src={ImageTab2} width="250px"     /><p></p></td>
+                          <td rowSpan="4"   ><br/><img   src={ImageTab2} width="100px"     /><p></p></td>
                           
                         </tr>
                         <tr>
