@@ -1,11 +1,25 @@
-import * as React from "react"
+import React, {useState} from "react"
 import { Link } from "gatsby"
 import styled from 'styled-components'
 import { FaBars } from 'react-icons/fa'
 import { menuData } from '../data/menuData'
 import { Button } from "./Button"
+import { ContactComponent } from "./modal/ContactComponent"
 
 const Header = ({toggle}) => {
+  const [showModal, setShowModal] = useState(false);
+
+  const openModal = () => {
+    setShowModal(prev => !prev);
+  };
+
+  const Hello = () => {
+    alert("hello");
+  }
+  const message = () => {
+    console.log("Hello World!") 
+   }
+
   return (
     <Nav>
       <NavLink to="/">30 Bar</NavLink>
@@ -18,7 +32,9 @@ const Header = ({toggle}) => {
         ))}
       </NavMenu>
       <NavBtn>
-        <Button primary="true" round="true" to="/price">Оставить заявку</Button>
+      
+        <Button primary="true" round="true" onClick={message} >Оставить заявку</Button>
+        <ContactComponent showModal={showModal} setShowModal={setShowModal} />
       </NavBtn>
     </Nav>
   )
