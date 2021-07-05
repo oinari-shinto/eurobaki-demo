@@ -1,8 +1,40 @@
 import React from 'react'
 import styled from 'styled-components'
 import { MdClose } from 'react-icons/md'
-import ImageFr from '../../assets/images/email.jpg'
+import ImageFr from '../../assets/images/email3.jpg'
+import { Button } from '../Button'
 
+
+
+
+
+export const ContactComponent = ({ showModal, setShowModal}) => {
+    return (
+        <>
+        { showModal ? (
+            <Background>
+                <ModalWrapper showModal={showModal}>
+                    <ModalImg src={ImageFr}
+                    alt='sklad' />
+                    <ModalContent>
+                        <h1>Shinsengumi</h1>
+                        <input type="phone" name="user_phone" placeholder="Телефон" />
+                        <br />
+                        <input type="email" name="user_email" placeholder="Email" />
+                        <br />
+                        <textarea name='message' rows='3' placeholder="Объем бака"/>
+                        <br />
+                    
+                        <Button primary="true" round="true" type='submit'>Заказать звонок</Button>
+                    </ModalContent>
+                    <CloseModalButton aria-label='Close modal' onClick={() => setShowModal
+                    (prev => !prev)} />
+                </ModalWrapper>
+            </Background>
+        ) : null } 
+        </>
+    );
+}
 
 
 const Background = styled.div`
@@ -65,30 +97,3 @@ const CloseModalButton = styled(MdClose)`
     padding: 0;
     z-index: 10;
 `
-
-
-
-
-export const ContactComponent = ({ showModal, setShowModal}) => {
-    return (
-        <>
-        { showModal ? (
-            <Background>
-                <ModalWrapper showModal={showModal}>
-                    <ModalImg src={ImageFr}
-                    alt='sklad' />
-                    <ModalContent>
-                        <h1>Shinsengumi</h1>
-                        <p>Samurai elite squad</p>
-                        <button>Join Now</button>
-                    </ModalContent>
-                    <CloseModalButton aria-label='Close modal' onClick={() => setShowModal
-                    (prev => !prev)} />
-                </ModalWrapper>
-            </Background>
-        ) : null } 
-        </>
-    );
-}
-
-
