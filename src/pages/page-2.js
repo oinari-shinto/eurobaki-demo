@@ -1,4 +1,4 @@
-import  React, {useRef, useEffect, Component } from "react"
+import  React, {useRef, useEffect, useState, Component } from "react"
 import { Link } from "gatsby"
 
 
@@ -15,6 +15,8 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 import { Carousel } from 'react-bootstrap'
 import DropDown from "../components/DropDown"
+import { ContactComponent } from "../components/modal/ContactComponent"
+import { Button } from "../components/Button"
 
 const SecondPage = () =>  {
   let headerRef = useRef(null);
@@ -28,12 +30,20 @@ const SecondPage = () =>  {
     })
     
     }, [])
+
+    const [showModal, setShowModal] = useState(false);
+
+  const openModal = () => {
+    setShowModal(prev => !prev);
+  };
   return (
     <Layout>
       <DropDown />
       <SEO title="Page two" />
       <div ref={headerRef}>
       <Component1 />
+      <Button primary="true" round="true" onClick={openModal} >Оставить заявку</Button>
+        <ContactComponent showModal={showModal} setShowModal={setShowModal} />
       <Certificates3/>
 
       </div>

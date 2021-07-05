@@ -1,11 +1,17 @@
-import React from 'react'
+import React, {useState} from 'react'
 import styled from 'styled-components'
 import { Button } from './Button'
 import Video from '../assets/videos/video-3.mp4'
 import Component1 from './Component1'
 import HeroH1 from './animeComponents/HeroH1'
+import { ContactComponent } from './modal/ContactComponent'
 
 export const Hero = ({HeaderMark}) => {
+    const [showModal, setShowModal] = useState(false);
+
+    const openModal = () => {
+    setShowModal(prev => !prev);
+    };
     return (
         <HeroContainer>
             <HeroBg>
@@ -17,7 +23,8 @@ export const Hero = ({HeaderMark}) => {
                     
                     {/* <HeroH1>Продажа и изготовление расширительных баков</HeroH1> */}
                     {/* <HeroP>Завод производство. Доставка по России</HeroP> */}
-                    <Button primary="true" big="true" round="true" to="/price">Заказать обратный звонок</Button>
+                    <Button primary="true" big="true" round="true" onClick={openModal}>Заказать обратный звонок</Button>
+                    <ContactComponent showModal={showModal} setShowModal={setShowModal} />
                 </HeroItems>
             </HeroContent>
         </HeroContainer>
@@ -73,7 +80,7 @@ const VideoBg = styled.video`
     object-fit: cover;
 `
 const HeroContent = styled.div`
-    z-index: 3;
+    z-index: 2;
     height: calc(100vh - 80px);
     max-height: 100%;
     padding: 0rem calc((100vw - 1300px) / 2);

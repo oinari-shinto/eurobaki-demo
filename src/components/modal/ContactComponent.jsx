@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { MdClose } from 'react-icons/md'
-
+import ImageFr from '../../assets/images/email.jpg'
 
 
 
@@ -13,6 +13,7 @@ const Background = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 100;
 `
 const ModalWrapper = styled.div`
     width: 800px;
@@ -23,7 +24,7 @@ const ModalWrapper = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     position: relative;
-    z-index: 10;
+    z-index: 100;
     border-radius: 10px;
 `
 
@@ -31,7 +32,7 @@ const ModalImg = styled.img`
     width: 100%;
     height: 100%;
     border-radius: 10px 0 0 10px;
-    background: #000;
+    
 `
 
 const ModalContent = styled.div`
@@ -74,7 +75,7 @@ export const ContactComponent = ({ showModal, setShowModal}) => {
         { showModal ? (
             <Background>
                 <ModalWrapper showModal={showModal}>
-                    <ModalImg src={require('../../assets/images/Sklad.jpg')}
+                    <ModalImg src={ImageFr}
                     alt='sklad' />
                     <ModalContent>
                         <h1>Shinsengumi</h1>

@@ -13,12 +13,7 @@ const Header = ({toggle}) => {
     setShowModal(prev => !prev);
   };
 
-  const Hello = () => {
-    alert("hello");
-  }
-  const message = () => {
-    console.log("Hello World!") 
-   }
+
 
   return (
     <Nav>
@@ -33,9 +28,10 @@ const Header = ({toggle}) => {
       </NavMenu>
       <NavBtn>
       
-        <Button primary="true" round="true" onClick={message} >Оставить заявку</Button>
-        <ContactComponent showModal={showModal} setShowModal={setShowModal} />
+        <Button primary="true" round="true" onClick={openModal} >Оставить заявку</Button>
+        
       </NavBtn>
+      <ContactComponent showModal={showModal} setShowModal={setShowModal} />
     </Nav>
   )
 }
@@ -48,7 +44,7 @@ height: 80px;
 display: flex;
 justify-content: space-between;
 padding: 0.5rem calc((100vw - 1300px) /2);
-z-index: 100;
+z-index: 3;
 position: relative;
 
 
