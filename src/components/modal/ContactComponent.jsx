@@ -3,29 +3,51 @@ import styled from 'styled-components'
 import { MdClose } from 'react-icons/md'
 import ImageFr from '../../assets/images/email3.jpg'
 import { Button } from '../Button'
-
+import emailjs from 'emailjs-com'
 
 
 
 
 export const ContactComponent = ({ showModal, setShowModal}) => {
+
+    function sendEmail(e) {
+        e.preventDefault();
+
+        emailjs.sendForm('service_704o88y', 'template_mz7z1ye', e.target, 'user_CsNfyTKpYGrJjgkx0Pdvc')
+          .then((result) => {
+              console.log(result.text);
+          }, (error) => {
+              console.log(error.text);
+          });
+          e.target.reset()
+    }
+    
     return (
         <>
         { showModal ? (
             <Background>
+            
                 <ModalWrapper showModal={showModal}>
+                
                     <ModalImg src={ImageFr}
                     alt='sklad' />
-                    <ModalContent>
-                        <h1>Shinsengumi</h1>
-                        <input type="phone" name="user_phone" placeholder="Телефон" />
-                        <br />
-                        <input type="email" name="user_email" placeholder="Email" />
-                        <br />
-                        <textarea name='message' rows='3' placeholder="Объем бака"/>
-                        <br />
+                    <ModalContent >
+                    <h5>Заказать звонок!</h5>
+                    <form onSubmit={sendEmail}>
+                        
+                        <div className=" form-group pt-2 mx-auto" >
+                        <input type="text"  className="form-control"  placeholder="Телефон" name="user_phone" />
+                        </div>
+                        <div className=" form-group pt-2 mx-auto" >
+                        <input type="email" className="form-control"  placeholder="Email" name="user_email" />
+                        </div>
+                        <div className=" form-group pt-2 mx-auto" >
+                        <textarea type="text"  className="form-control" name='message' rows='3' placeholder="Объем бака" />
+                        </div>
                     
                         <Button primary="true" round="true" type='submit'>Заказать звонок</Button>
+                    </form>
+                        
                     </ModalContent>
                     <CloseModalButton aria-label='Close modal' onClick={() => setShowModal
                     (prev => !prev)} />
@@ -64,6 +86,14 @@ const ModalImg = styled.img`
     width: 100%;
     height: 100%;
     border-radius: 10px 0 0 10px;
+
+    
+    @media screen and (max-width: 468px) {
+    width: 100%;
+    height: 50%;
+    margin-top: 95px;
+    border-radius: 10px 10px 10px 10px;
+  }
     
 `
 
