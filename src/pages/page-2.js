@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 
 import Layout from "../layouts/MainLayout"
-import SEO from "../components/seo"
+import SEO from "../components/Seo"
 import Component1 from "../components/Component1"
 
 import { gsap } from "gsap";

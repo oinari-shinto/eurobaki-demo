@@ -3,7 +3,7 @@ import React from "react"
 
 import styled from 'styled-components'
 import Layout from "../layouts/mainLayout"
-import SEO from "../components/seo"
+import SEO from "../components/Seo"
 import { Hero } from "../components/Hero"
 import Products from "../components/Products"
 import Certificates from "../components/CertificatesWester"
