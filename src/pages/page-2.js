@@ -2,7 +2,7 @@ import  React, {useRef, useEffect, useState, Component } from "react"
 import { Link } from "gatsby"
 
 
-import Layout from "../layouts/mainLayout"
+import Layout from "../layouts/MainLayout"
 import SEO from "../components/seo"
 import Component1 from "../components/Component1"
 

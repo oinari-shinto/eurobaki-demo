@@ -1,7 +1,5 @@
-
-import * as React from 'react'
+import React, { useState } from 'react'
 import Footer from "../components/Footer"
-import { useState } from 'react'
 import Header from "../components/Header"
 import { GlobalStyle } from "../components/styles/GlobalStyles"
 import DropDown from '../components/DropDown'

@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 
 
-import Layout from "../layouts/mainLayout"
+import Layout from "../layouts/MainLayout"
 import SEO from "../components/seo"
 
 
@@ -12,7 +12,7 @@ import Certificates from "../components/CertificatesZilmet"
 import Stats from "../components/Stats"
 import Email from "../components/Email"
 
-import PresentationSection from "../components/PresentationSection"
+
 import TableZilmet from "../components/dataTables/TableZilmet"
 
 

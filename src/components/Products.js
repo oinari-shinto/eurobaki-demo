@@ -136,7 +136,7 @@ const ProductsWrapper = styled.div`
 const ProductCard = styled.div`
   line-height: 2;
   width: 100%;
-  height: 100%;
+  height: 400px;
    /* 100% if i want see image */
   position: relative;
   border-radius: 10px;

@@ -2,7 +2,7 @@ import * as React from "react"
 import { Link } from "gatsby"
 
 
-import Layout from "../layouts/mainLayout"
+import Layout from "../layouts/MainLayout"
 import SEO from "../components/seo"
 
 
@@ -12,7 +12,7 @@ import ProductsReflex from "../components/ProductsReflex"
 import Stats from "../components/Stats"
 import Email from "../components/Email"
 import TableReflex from "../components/dataTables/TableReflex";
-import PresentationSection from "../components/PresentationSection"
+
 import CertificatesReflex from "../components/CertificatesReflex"
 
 
@@ -20,7 +20,7 @@ import CertificatesReflex from "../components/CertificatesReflex"
 
 
 
-const reflex = () => (
+const Reflex = () => (
   <Layout>
     <SEO title="Reflex" />
     <Hero HeaderMark="Поставки расширительных баков Reflex из Германии"/>
@@ -35,5 +35,5 @@ const reflex = () => (
   </Layout>
 )
 
-export default reflex
+export default Reflex
 

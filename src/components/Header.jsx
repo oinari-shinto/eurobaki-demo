@@ -17,7 +17,7 @@ const Header = ({toggle}) => {
 
   return (
     <Nav>
-      <NavLink to="/">30 Bar</NavLink>
+      <NavLink to="/">EuroBaki <br />   8 (812) 317-00-32</NavLink>
       <MenuBars onClick={toggle}/>
       <NavMenu>
         {menuData.map((item, index) => (
@@ -32,7 +32,9 @@ const Header = ({toggle}) => {
         
       </NavBtn>
       <ContactComponent showModal={showModal} setShowModal={setShowModal} />
+      
     </Nav>
+    
   )
 }
 

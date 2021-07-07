@@ -34,6 +34,7 @@ export default function HeroH1({HeaderMark}) {
     <AnimeHeader className="headerAnime">
       <HeaderH1>{HeaderMark}</HeaderH1>
       <HeroP>Завод производство. Доставка по России</HeroP>
+      <HeroP>почта: info@30bar.ru</HeroP>
     </AnimeHeader>
     
   );

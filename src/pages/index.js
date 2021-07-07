@@ -1,5 +1,5 @@
-import React, {useEffect} from "react"
-import { Link } from "gatsby"
+import React from "react"
+
 
 import styled from 'styled-components'
 import Layout from "../layouts/mainLayout"
@@ -9,7 +9,7 @@ import Products from "../components/Products"
 import Certificates from "../components/CertificatesWester"
 import Stats from "../components/Stats"
 import Email from "../components/Email"
-import Footer from "../components/Footer"
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
