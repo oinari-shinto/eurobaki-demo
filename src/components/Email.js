@@ -2,17 +2,29 @@
     import styled from 'styled-components'
     import EmailBg from '../assets/images/sklad.jpg'
     import { Button } from './Button'
-    
+    import emailjs from 'emailjs-com'
+
     function Email() {
+        function sendPhone(e) {
+            e.preventDefault();
+
+            emailjs.sendForm('service_704o88y', 'template_mz7z1ye', e.target, 'user_CsNfyTKpYGrJjgkx0Pdvc')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+            e.target.reset()
+        }
         return (
             <EmailContainer>
                 <EmailContent>
                      <h1>Получить лучшую цену</h1>
                      <p>Оставьте номер телефона и мы Вам перезвоним!</p>
-                     <form action="#">
-                         <FormWrap>
+                     <form action="#" onSubmit={sendPhone}>
+                         <FormWrap >
                              <label htmlFor="phone">
-                                 <input type="phone" placeholder="Введите свой телефон" id="phone"/>
+                                 <input type="phone" placeholder="Введите свой телефон" name="user_phone" id="phone"/>
                              </label>
                              
                              <Button
