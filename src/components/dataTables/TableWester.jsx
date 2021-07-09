@@ -1,9 +1,8 @@
 import React from 'react'
 import { Container, Table } from 'react-bootstrap'
-import Link from 'gatsby-link'
 import styled from 'styled-components'
 
-import {useStaticQuery, graphql} from 'gatsby'
+
 
 import ImageTab1 from '../../assets/images/wrv-top.jpg'
 import ImageTab2 from '../../assets/images/wrv2-1000.jpg'
@@ -14,33 +13,7 @@ import ImageTab4 from '../../assets/images/wav-1000.png'
 
 const TableWester = () => {
 
-      /* const data = useStaticQuery(graphql`
-      query ProductsQuery  {
-        allProductsJson (filter: {name: {in: "manyTank"}}) {
-          edges {
-            node {
-              alt
-              button
-              name
-              link
-              img1 {
-                childImageSharp {
-                  fluid {
-                    ...GatsbyImageSharpFluid
-                  }
-              img2 {
-                childImageSharp {
-                  fluid {
-                    ...GatsbyImageSharpFluid
-                  }
-                }
-              }
-            }
-          }
-          
-        }
-      }
-    `) */
+      
 
 
     return (

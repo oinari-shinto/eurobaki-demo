@@ -1,9 +1,9 @@
 import React from 'react'
 import { Container, Table } from 'react-bootstrap'
-import Link from 'gatsby-link'
+
 import styled from 'styled-components'
 
-import {useStaticQuery, graphql} from 'gatsby'
+
 
 import ImageTab1 from '../../assets/images/reflex-n-small.jpg'
 import ImageTab2 from '../../assets/images/reflex-g-small.png'
@@ -14,34 +14,7 @@ import ImageTab5 from '../../assets/images/reflex_de_1000.jpg'
 
 const TableReflex = () => {
 
-      /* const data = useStaticQuery(graphql`
-      query ProductsQuery  {
-        allProductsJson (filter: {name: {in: "manyTank"}}) {
-          edges {
-            node {
-              alt
-              button
-              name
-              link
-              img1 {
-                childImageSharp {
-                  fluid {
-                    ...GatsbyImageSharpFluid
-                  }
-              img2 {
-                childImageSharp {
-                  fluid {
-                    ...GatsbyImageSharpFluid
-                  }
-                }
-              }
-            }
-          }
-          
-        }
-      }
-    `) */
-
+      
 
     return (
         <div>
