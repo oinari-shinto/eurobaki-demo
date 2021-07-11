@@ -17,6 +17,9 @@ module.exports = {
         path: `${__dirname}/src/assets/images`,
       },
     },
+    module.exports = {
+      pathPrefix: "/eurobaki-demo",
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
