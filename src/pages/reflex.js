@@ -1,4 +1,4 @@
-/* import * as React from "react"
+import * as React from "react"
 import { Link } from "gatsby"
 
 
@@ -37,4 +37,3 @@ const Reflex = () => (
 
 export default Reflex
 
- */

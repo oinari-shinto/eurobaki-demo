@@ -1,4 +1,4 @@
-/* import * as React from "react"
+import * as React from "react"
 import { Link } from "gatsby"
 
 
@@ -36,4 +36,4 @@ const Zilmet = () => (
   </Layout>
 )
 
-export default Zilmet */
+export default Zilmet

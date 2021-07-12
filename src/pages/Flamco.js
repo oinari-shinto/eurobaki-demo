@@ -1,4 +1,4 @@
-/* import React from "react"
+import React from "react"
 import { Link } from "gatsby"
 
 
@@ -35,4 +35,4 @@ const Flamco = () => (
   </Layout>
 )
 
-export default Flamco */
+export default Flamco
