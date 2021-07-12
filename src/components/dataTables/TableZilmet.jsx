@@ -1,15 +1,14 @@
 import React from 'react'
 import { Container, Table } from 'react-bootstrap'
-import Link from 'gatsby-link'
 import styled from 'styled-components'
 
-import {useStaticQuery, graphql} from 'gatsby'
+
 
 import ImageTab2 from '../../assets/images/zilmet-ultra-1000.jpg'
 import ImageTab1 from '../../assets/images/zilmet-small.jpg'
 
 
-const TableZilemet = () => {
+const TableZilmet = () => {
 
   
 
@@ -152,7 +151,7 @@ const TableZilemet = () => {
     )
 }
 
-export default TableZilemet
+export default TableZilmet
 
 
 const TableSetting = styled.div`

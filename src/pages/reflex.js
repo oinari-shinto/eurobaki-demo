@@ -1,9 +1,9 @@
-import * as React from "react"
+/* import * as React from "react"
 import { Link } from "gatsby"
 
 
 import Layout from "../layouts/MainLayout"
-import SEO from "../components/Seo"
+import Seo from "../components/Seo"
 
 
 import { Hero } from "../components/Hero"
@@ -22,12 +22,12 @@ import CertificatesReflex from "../components/CertificatesReflex"
 
 const Reflex = () => (
   <Layout>
-    <SEO title="Reflex" />
+    <Seo title="Reflex" />
     <Hero HeaderMark="Поставки расширительных баков Reflex из Германии"/>
     <ProductsReflex heading="Reflex"/>
     <TableReflex />
     <CertificatesReflex />
-    {/* <PresentationSection /> */}
+    
     <Stats />
     <Email />
     <Link to="/">Go back to the homepage</Link>
@@ -37,3 +37,4 @@ const Reflex = () => (
 
 export default Reflex
 
+ */

@@ -3,7 +3,7 @@ import styled, { keyframes } from 'styled-components'
 import {useStaticQuery, graphql} from 'gatsby'
 import Img from 'gatsby-image'
 import { Button } from './Button'
-import { resetWarningCache } from 'prop-types'
+
 import {ImLocation} from 'react-icons/im'
 import Link from 'gatsby-link'
 

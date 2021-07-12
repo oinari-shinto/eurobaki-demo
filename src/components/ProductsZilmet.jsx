@@ -3,9 +3,9 @@ import styled from 'styled-components'
 import {useStaticQuery, graphql} from 'gatsby'
 import Img from 'gatsby-image'
 import { Button } from './Button'
-import { resetWarningCache } from 'prop-types'
+
 import {ImLocation} from 'react-icons/im'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 
 
 const ProductsZilmet = ({ heading }) => {

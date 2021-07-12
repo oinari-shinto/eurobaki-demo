@@ -1,24 +1,23 @@
 import React from 'react'
 import styled from 'styled-components'
-import {StatsData} from '../data/statsData'
+import { statsData } from '../data/statsData'
 
 
 
 
-function Stats() {
+const Stats = () => {
     return (
         <StatsContainer>
-            <Heading>Что мы пожем предложить</Heading>
+            <Heading>Что мы можем предложить</Heading>
             <Wrapper>
-                {StatsData.map((item, index) => {
-                    return (
+                {statsData.map((item, index) => (
+                    
                         <StatsBox key={index}>
-                        <Icon>{item.icon}</Icon>
-                        <Title>{item.title}</Title>
-                        <Description>{item.desc}</Description>
+                            <Icon>{item.icon}</Icon>
+                            <Title>{item.title}</Title>
+                            <Description>{item.desc}</Description>
                         </StatsBox>
-                    )
-                })}
+                ))}
             </Wrapper>
         </StatsContainer>
     )

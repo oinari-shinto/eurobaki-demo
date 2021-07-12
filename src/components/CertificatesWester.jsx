@@ -1,10 +1,10 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import styled from 'styled-components'
-import Img from 'gatsby-image'
+
 import {IoMdCheckmarkCircleOutline} from 'react-icons/io'
 import {FaRegLightbulb} from 'react-icons/fa'
 import { graphql, useStaticQuery } from 'gatsby'
-import { StaticImage, GatsbyImage } from 'gatsby-plugin-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
@@ -16,22 +16,7 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.defaults({ease: "none", duration: 2});
 
 const Certificates = () => {
-    /* const tl = gsap.timeline();
-    useEffect(() => {
-      
-      tl.from('.container', {xPercent: 0});
-        
-    
-    ScrollTrigger.create({
-      animation: tl,
-      trigger: ".container",
-      start: "top top",
-      end: "+=400",
-      scrub: true,
-      pin: true,
-      anticipatePin: 1
-    })
-    }, []) */
+   
 
     
     const data = useStaticQuery (
@@ -223,13 +208,7 @@ const ContainerScroll = styled.div`
     
     
 `
-const Images = styled(Img)`
-    /* border-radius: 10px; */
-    height: 750px;
-    /* min-width: 580px; */
-    
 
-`
 
 
 

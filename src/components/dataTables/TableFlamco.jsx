@@ -9,7 +9,7 @@ import ImageTab2 from '../../assets/images/flexcon-r-1000.jpg'
 import ImageTab1 from '../../assets/images/flexcon-r-small.jpg'
 
 
-const TableZilemet = () => {
+const TableFlamco = () => {
 
   
 
@@ -122,7 +122,7 @@ const TableZilemet = () => {
     )
 }
 
-export default TableZilemet
+export default TableFlamco
 
 
 const TableSetting = styled.div`

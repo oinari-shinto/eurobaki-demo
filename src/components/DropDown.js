@@ -35,7 +35,7 @@ const DropDown = ({ isOpen, toggle }) => {
     )
 }
 
-
+export default DropDown
 
 const DropdownContainer = styled.div`
     position: fixed;
@@ -98,4 +98,4 @@ const BtnWrap = styled.div`
     justify-content: center;
 `;
 
-export default DropDown
+

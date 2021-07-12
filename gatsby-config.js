@@ -4,6 +4,7 @@ module.exports = {
     description: `Производство и продажа расширительных баков.`,
     author: `@gatsbyjs`,
   },
+  
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
@@ -16,9 +17,6 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/assets/images`,
       },
-    },
-    module.exports = {
-      pathPrefix: "/eurobaki-demo",
     },
     {
       resolve: `gatsby-source-filesystem`,

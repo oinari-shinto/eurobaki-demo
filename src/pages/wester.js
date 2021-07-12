@@ -1,9 +1,9 @@
-import * as React from "react"
+/* import * as React from "react"
 import { Link } from "gatsby"
 
 
 import Layout from "../layouts/MainLayout"
-import SEO from "../components/Seo"
+import Seo from "../components/Seo"
 
 
 import { Hero } from "../components/Hero"
@@ -21,22 +21,20 @@ import TableWester from "../components/dataTables/TableWester";
 
 const Wester = () => (
   <Layout>
-    <SEO title="Wester" />
+    <Seo title="Wester" />
     <Hero HeaderMark="Продажа и изготовление расширительных баков Wester"/>
     <ProductsWester heading="Wester"/>
     <TableWester />
     <Certificates />
-    {/* <PresentationSection /> */}
+    
     <Stats />
     <Email />
     <Link to="/">Go back to the homepage</Link>
     
-    {/* <p>
-      <Link to="/page-2/">Go to page 2</Link> <br />
-      <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-    </p> */}
+
   </Layout>
 )
 
 export default Wester
 
+ */
