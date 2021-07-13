@@ -2,10 +2,11 @@ import React from 'react'
 import {GiEarthAmerica} from 'react-icons/gi'
 import {MdAirplanemodeActive, MdTimer} from 'react-icons/md'
 import {FaMoneyCheck} from 'react-icons/fa'
+import styled from 'styled-components'
 
 export const statsData = [
     {
-        icon: (<GiEarthAmerica />),
+        icon: (<GiEarthAmerica css={`color : #45211`} />),
         title: "Больше 270 контрактов",
         desc: "Тендеры и поставки по всей России"
     },
@@ -25,3 +26,4 @@ export const statsData = [
         desc: "Если есть предложение сделаем цену дешевле!"
     },
 ]
+
