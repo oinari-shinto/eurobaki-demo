@@ -2,8 +2,8 @@ import * as React from "react"
 import { Link } from "gatsby"
 
 
-import Layout from "../layouts/MainLayout"
-import Seo from "../components/Seo"
+import Layout from "../layouts/Layout"
+import Seo from "../components/SEO"
 
 
 import { Hero } from "../components/Hero"

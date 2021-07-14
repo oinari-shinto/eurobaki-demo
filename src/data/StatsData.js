@@ -6,7 +6,9 @@ import styled from 'styled-components'
 
 export const statsData = [
     {
-        icon: (<GiEarthAmerica css={`color : #45211`} />),
+        icon: (<GiEarthAmerica 
+        //css={`color : #45211`}
+         />),
         title: "Больше 270 контрактов",
         desc: "Тендеры и поставки по всей России"
     },
