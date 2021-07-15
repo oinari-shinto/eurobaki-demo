@@ -13,9 +13,6 @@ import ImageTab4 from '../../assets/images/wav-1000.png'
 
 const TableWester = () => {
 
-      
-
-
     return (
         <div>
             <TableSetting>

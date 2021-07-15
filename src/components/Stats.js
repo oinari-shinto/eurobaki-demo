@@ -5,7 +5,7 @@ import { statsData } from '../data/statsData'
 
 
 
-const Stats = () => {
+export const Stats = () => {
     return (
         <StatsContainer>
             <Heading>Что мы можем предложить</Heading>
@@ -23,7 +23,7 @@ const Stats = () => {
     )
 }
 
-export default Stats
+
 
 const StatsContainer = styled.div`
     width: 100%;

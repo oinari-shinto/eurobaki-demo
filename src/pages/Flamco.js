@@ -9,7 +9,7 @@ import Seo from "../components/SEO"
 import { Hero } from "../components/Hero"
 import ProductsWester from "../components/ProductsWester"
 import Certificates from "../components/CertificatesFlamco"
-import Stats from "../components/Stats"
+import { Stats } from "../components/Stats"
 import Email from "../components/Email"
 import TableFlamco from "../components/dataTables/TableFlamco";
 

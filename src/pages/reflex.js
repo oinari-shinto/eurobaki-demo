@@ -1,4 +1,4 @@
-import * as React from "react"
+import React from "react"
 import { Link } from "gatsby"
 
 
@@ -9,7 +9,7 @@ import Seo from "../components/SEO"
 import { Hero } from "../components/Hero"
 import ProductsReflex from "../components/ProductsReflex"
 
-import Stats from "../components/Stats"
+import { Stats } from "../components/Stats"
 import Email from "../components/Email"
 import TableReflex from "../components/dataTables/TableReflex";
 
